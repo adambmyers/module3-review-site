@@ -17,6 +17,6 @@ public class HomeController {
 	public String signin() {
 		return "signin";
 }
-{
+
 	
 }
