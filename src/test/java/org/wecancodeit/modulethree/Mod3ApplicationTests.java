@@ -1,4 +1,4 @@
-package org.wecancodeit.Mod3;
+package org.wecancodeit.modulethree;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
