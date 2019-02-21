@@ -24,5 +24,14 @@ public class ParksRepositories {
 	public String toString() {
 		return "ParksRepositories [parks=" + parks + "]";
 	}
-
+	public Park findPark(String name) {
+		Park foundPark = null;
+		for (Park park : parks) {
+			if (park.getName().equals(name)) {
+				foundPark = parks;
+				
+			}
+		}
+		return foundPark;
+	}
 }
