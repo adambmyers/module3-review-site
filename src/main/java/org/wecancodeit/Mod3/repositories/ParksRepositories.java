@@ -28,7 +28,7 @@ public class ParksRepositories {
 		Park foundPark = null;
 		for (Park park : parks) {
 			if (park.getName().equals(name)) {
-				foundPark = parks;
+				foundPark = park;
 				
 			}
 		}
