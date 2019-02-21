@@ -1,13 +1,13 @@
-package org.wecancodeit.Mod3;
+package org.wecancodeit.modulethree;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Mod3Application {
+public class ModuleThreeApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Mod3Application.class, args);
+		SpringApplication.run(ModuleThreeApplication.class, args);
 	}
 
 }
