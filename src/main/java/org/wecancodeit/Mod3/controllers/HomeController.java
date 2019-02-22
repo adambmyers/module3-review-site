@@ -2,6 +2,7 @@ package org.wecancodeit.Mod3.controllers;
 
 import java.util.ArrayList;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -9,30 +10,36 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.wecancodeit.Mod3.models.Park;
 import org.wecancodeit.Mod3.repositories.ParksRepositories;
 
+@Controller
+
 public class HomeController {
 
 	private ParksRepositories parks = new ParksRepositories(new ArrayList<Park>());
 	
 	@GetMapping("/")
-	public String home() {
+	public String index() {
 		return "index";
 	}
 	
 	@GetMapping("/signin")
 	public String signin() {
+<<<<<<< HEAD
+		return "signin/signin";
+=======
 		return "redirect:signin";
+>>>>>>> a2f2bd4471509c5eb5fa7d2e3898d1caca2c0ebd
 	}
 	
-	@GetMapping("/parks/add")
-	public String getParkForm (Model model) {
+	@GetMapping("/parks/addParks")
+	public String getParkForm(Model model) {
 		model.addAttribute("parks", parks.getParks());
-		return "parks/add";
+		return "parks/addParks";
 	}
 	
-	@PostMapping("/parks/add")
+	@PostMapping("/parks/addParks")
 	public String addPark(String name, String location, String type) {
 		parks.addPark(new Park(name, location, type));
-		return "redirect:/parks/" + name;
+		return "redirect:/parks/addParks";
 	}
 	
 	
