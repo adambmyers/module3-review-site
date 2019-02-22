@@ -6,7 +6,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.wecancodeit.Mod3.models.Park;
 import org.wecancodeit.Mod3.repositories.ParksRepositories;
 
@@ -21,7 +20,7 @@ public class HomeController {
 		return "index";
 	}
 	
-	@GetMapping("/signin")
+	@GetMapping("/signin/signin")
 	public String signin() {
 		return "signin/signin";
 	}
@@ -37,6 +36,8 @@ public class HomeController {
 		parks.addPark(new Park(name, location, type));
 		return "redirect:/parks/addParks";
 	}
+	
+	
 	
 	
 }

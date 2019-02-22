@@ -1,26 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-    <html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Add Park</title>
 </head>
-<body>
 
+<body>
+    <header>
+
+        <a href="/">Home</a>
+        <a href="/signin/signin">Log-in/SignUp</a>
         <ul>
-                <li th:each="park : ${parks}">
-                    <span th:text="|${park.name}: ${park.location}, favorite color: ${park.type}|">Default value</span>
-                </li>
-            </ul>
-            <form action="/parks/add" method="POST">
-                <input type="text" name="name" />
-                <input type="text" name="location" />
-                <input type="text" name="type" />
-                <!-- input type="submit" value="Submit" /-->
-                <button type="submit">Submit</button>
-            </form>
-    
+            <li th:each="park : ${parks}">
+                <span th:text="|${park.name}: ${park.location}, favorite color: ${park.type}|">Default value</span>
+            </li>
+        </ul>
+
+
+    </header>
+    <form action="/parks/addParks" method="POST">
+        <label>Park Name:<input type="text" name="name" /></label>
+        <label>Park Location:<input type="text" name="location" /></label>
+        <label>Review:<input type="text" name="type" /></label>
+        <!-- input type="submit" value="Submit" /-->
+        <button type="submit">Submit</button>
+    </form>
+
+
+
 </body>
+
 </html>
