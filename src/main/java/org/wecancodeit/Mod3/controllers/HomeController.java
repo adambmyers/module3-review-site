@@ -23,11 +23,7 @@ public class HomeController {
 	
 	@GetMapping("/signin")
 	public String signin() {
-<<<<<<< HEAD
 		return "signin/signin";
-=======
-		return "redirect:signin";
->>>>>>> a2f2bd4471509c5eb5fa7d2e3898d1caca2c0ebd
 	}
 	
 	@GetMapping("/parks/addParks")
