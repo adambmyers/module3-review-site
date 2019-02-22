@@ -4,11 +4,11 @@ import java.util.List;
 
 import org.wecancodeit.Mod3.models.Park;
 
-public class ParksRepositories {
+public class OldParksRepositories {
 
 	private List<Park> parks;
 
-	public ParksRepositories(List<Park> parks) {
+	public OldParksRepositories(List<Park> parks) {
 		this.parks = parks;
 	}
 
