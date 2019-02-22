@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.wecancodeit.Mod3.models.Park;
 import org.wecancodeit.Mod3.repositories.ParksRepositories;
 
@@ -22,7 +23,11 @@ public class HomeController {
 	
 	@GetMapping("/signin")
 	public String signin() {
+<<<<<<< HEAD
 		return "signin/signin";
+=======
+		return "redirect:signin";
+>>>>>>> a2f2bd4471509c5eb5fa7d2e3898d1caca2c0ebd
 	}
 	
 	@GetMapping("/parks/addParks")

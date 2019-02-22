@@ -21,6 +21,11 @@ html {
 	margin-bottom: 3px;
 	}
 
+a.signin-button {
+	text-decoration: none;
+	color: white;
+}
+
 .grid-footer {
   	background-color: white;
   	opacity:.8;
