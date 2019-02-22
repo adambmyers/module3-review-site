@@ -1,25 +1,48 @@
 *{
-  background-color: #D3D3D3;
   margin: 0;
-  padding: 0;
+  padding:0;
 }
+
+html {
+	background-image: url(https://www.publicdomainpictures.net/pictures/10000/velka/moonlight-landscape-11287160000RlIy.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;  
+	}
 
 .grid-header {
-	box-shadow: 0 3px 9px -2px #00FFFF;
-	background-color: white;
-  text-align: center;
-  display: flex;
-    justify-content: space-between;
-  padding: 1.2rem; 
-  margin-bottom: 3px;
-  
+	box-shadow: 0 1px 9px -2px #FFFFFF;
+	background-color: black;
+	opacity: .8;
+	text-align: center;
+	display: flex;
+	justify-content: space-between;
+	padding: 1.2rem; 
+	margin-bottom: 3px;
+	}
+
+a.signin-button {
+	text-decoration: none;
+	color: white;
 }
 
-/* #login {
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 10px;
-  align-content: center;
-  
+.grid-footer {
+  	background-color: white;
+  	opacity:.8;
+  	padding: 1.2rem;
+	}
 
-} */
+.grid-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+	}
+
+#center {
+  	margin-top:5rem;
+  	margin-bottom:5rem;
+  	display: flex;
+    justify-content: center;
+    align-items: center; 
+  	color: white;
+	}
