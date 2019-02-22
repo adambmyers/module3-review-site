@@ -24,7 +24,7 @@ public class HomeController {
 	@GetMapping("/signin")
 	public String signin() {
 
-		return "redirect:signin";
+		return "signin/signin";
 
 	}
 	
