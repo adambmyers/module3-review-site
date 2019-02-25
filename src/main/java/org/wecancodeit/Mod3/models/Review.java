@@ -10,11 +10,14 @@ public class Review {
 
 	@Id
 	@GeneratedValue
+	//@genvalue used to autocreate a unique value for the id
 	private Long id;
 	private String title;
+	//imageUrl used to pull a picture for the park under review
 	private String imageUrl;
 	private String reviewCategory;
 	@Lob
+	// @Lob is used to allow for more than 255 chars per String
 	private String review;
 	
 	public Review() {

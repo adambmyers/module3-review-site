@@ -8,7 +8,8 @@ import javax.persistence.Id;
 public class Park {
 	@Id
 	@GeneratedValue
-	private Long id;
+	// id for each park is initialized here
+	private Long id;  
 	private String name;
 	private String location;
 	private String type;
@@ -41,6 +42,7 @@ public class Park {
 	}
 
 	@Override
+	//used to remove the hash code of the object
 	public String toString() {
 		return "Park [name=" + name + ", location=" + location + ", type=" + type + "]";
 	}

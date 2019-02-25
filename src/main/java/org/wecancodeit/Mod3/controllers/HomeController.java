@@ -13,9 +13,11 @@ import org.wecancodeit.Mod3.repositories.ParksRepository;
 
 public class HomeController {
 
+	//instantiates collection of name parks 
 	@Resource
 	ParksRepository parks;
 	
+	//@getmapping is used to pull info only and display it.  "/" is to pull the home page, index.html
 	@GetMapping("/")
 	public String index() {
 		return "index";
@@ -26,16 +28,22 @@ public class HomeController {
 		return "signin/signin";
 	}
 	
-	@GetMapping("/parks/addParks")
+	@GetMapping("/parks/addReview")
+	// Model = interface. model = variable to call interface
+	// addAttribute common method within Model interface
 	public String getParkForm(Model model) {
+		// within addAttribute, "parks" = name of the thing we're finding
+		// parks.findAll = finding all "parks"
 		model.addAttribute("parks", parks.findAll());
-		return "parks/addParks";
+		return "parks/addReview";
 	}
 	
-	@PostMapping("/parks/addParks")
+	//@post allows us to add information to our reviews repo.  
+	@PostMapping("/parks/addReview")
 	public String addPark(String name, String location, String type) {
 		parks.save(new Park(name, location, type));
-		return "redirect:/parks/addParks";
+		//return below redirects our review add from above and display it to the page below
+		return "redirect:/parks/addReview";
 	}
 	
 }
