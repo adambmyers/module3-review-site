@@ -7,5 +7,8 @@ import org.wecancodeit.Mod3.models.Park;
 @Repository
 public interface ParksRepository extends CrudRepository <Park, Long>{
 
+	Park findByName(String parkName);
+	Park findByCategory(String categoryName);
+	
 }
 

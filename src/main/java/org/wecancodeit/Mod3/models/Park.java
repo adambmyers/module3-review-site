@@ -1,49 +1,50 @@
 package org.wecancodeit.Mod3.models;
 
+import java.util.Collection;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Park {
+	
 	@Id
 	@GeneratedValue
 	// id for each park is initialized here
 	private Long id;  
-	private String name;
-	private String location;
-	private String type;
+	private String parkName;
+
+	
+	@OneToMany(mappedBy="park")
+	private Collection<Review> reviews;
 	
 	public Park() {
 		// don't put anything in here; it's a hook for JPA
 	}
+
 	
+	public Park(String parkName) {
+		this.parkName = parkName;
+	}
+
+
 	public Long getId() {
 		return id;
 	}
 	
-	public String getName() {
-		return name;
+	public String getParkName() {
+		return parkName;
 	}
-
-	public String getLocation() {
-		return location;
-	}
-
-	public String getType() {
-		return type;
-	}
-
-
-	public Park(String name, String location, String type) {
-		this.name = name;
-		this.location = location;
-		this.type = type;
+	
+	public Collection<Review> getReviews(){
+		return reviews;
 	}
 
 	@Override
-	//used to remove the hash code of the object
 	public String toString() {
-		return "Park [name=" + name + ", location=" + location + ", type=" + type + "]";
+		return "Park [id=" + id + ", parkName=" + parkName + ", reviews=" + reviews + "]";
 	}
+
 }
