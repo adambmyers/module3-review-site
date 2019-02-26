@@ -11,22 +11,22 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.wecancodeit.Mod3.models.Category;
 import org.wecancodeit.Mod3.models.Park;
 import org.wecancodeit.Mod3.models.Review;
-import org.wecancodeit.Mod3.repositories.CategoriesRepository;
-import org.wecancodeit.Mod3.repositories.ParksRepository;
-import org.wecancodeit.Mod3.repositories.ReviewsRepository;
+import org.wecancodeit.Mod3.repositories.CategoryRepository;
+import org.wecancodeit.Mod3.repositories.ParkRepository;
+import org.wecancodeit.Mod3.repositories.ReviewRepository;
 
 @Controller
 @RequestMapping("/reviews")
-public class ReviewsController {
+public class ReviewController {
 
 	@Resource
-	ParksRepository parkRepo;
+	ParkRepository parkRepo;
 	
 	@Resource
-	ReviewsRepository reviewRepo; 
+	ReviewRepository reviewRepo; 
 	
 	@Resource
-	CategoriesRepository categoryRepo;
+	CategoryRepository categoryRepo;
 	
 	// Model = interface. model = variable to call interface
 	// addAttribute common method within Model interface
@@ -56,10 +56,10 @@ public class ReviewsController {
 			
 		) {
 			
-			Category category = categoryRepo.findByName(categoryName); //addGet
+			Category category = categoryRepo.findByCategoryName(categoryName); //addGet
 //			category = categoryRepo.save(new Category(categoryName));
 		
-			Park park = parkRepo.findByName(parkName);
+			Park park = parkRepo.findByParkName(parkName);
 //			park = parkRepo.save(new Park(parkName); 
 			
 	

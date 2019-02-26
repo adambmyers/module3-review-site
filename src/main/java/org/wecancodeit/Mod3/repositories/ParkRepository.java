@@ -5,10 +5,10 @@ import org.springframework.stereotype.Repository;
 import org.wecancodeit.Mod3.models.Park;
 
 @Repository
-public interface ParksRepository extends CrudRepository <Park, Long>{
+public interface ParkRepository extends CrudRepository <Park, Long>{
 
-	Park findByName(String parkName);
-	Park findByCategory(String categoryName);
+	Park findByParkName(String parkName);
+
 	
 }
 

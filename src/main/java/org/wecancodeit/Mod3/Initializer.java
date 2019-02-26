@@ -1,10 +1,10 @@
-package org.wecancodeit.Mod3;
+//package org.wecancodeit.Mod3;
 
-import javax.annotation.Resource;
+//import javax.annotation.Resource;
 
 
 
-public class Initializer {
+//public class Initializer {
 	
 //	@Service
 //	public class Initializer implements CommandLineRunner {
@@ -27,6 +27,6 @@ public class Initializer {
 //			peopleRepo.save(new Person("Java", 51, "#bada55", address));
 //		}
 
-	}
+//	}
 
-}
+//}
