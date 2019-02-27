@@ -12,8 +12,8 @@ public class Category {
 
 	@Id
 	@GeneratedValue
-	private String categoryName;
 	private Long id;
+	private String categoryName;
 	
 	@OneToMany(mappedBy="category")
 	private Collection<Review> reviews;
