@@ -23,8 +23,8 @@ public class Review {
 	// @Lob is used to allow for more than 255 chars per String
 	private String review;
 	
-	@ManyToOne //see here if front end issues - took away on @ManyToOne to refactor
-	private Category category; 
+//	@ManyToOne //see here if front end issues - took away on @ManyToOne to refactor
+//	private Category category; 
 	@ManyToOne
 	private Park park;
 	
@@ -33,12 +33,12 @@ public class Review {
 		//don't use; JPA hook
 	}
 	
-	public Review(String title, String imageUrl, String review, Category category, Park park) {
+	public Review(String title, String imageUrl, String review, Park park) {
 		this.title = title;
 		this.imageUrl= imageUrl;
 		this.review = review;
 		this.park = park;
-		this.category = category;
+		
 	}
 	
 	public Long getId() {

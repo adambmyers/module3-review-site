@@ -1,11 +1,15 @@
 package org.wecancodeit.Mod3.models;
 
+import java.util.Arrays;
 import java.util.Collection;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
+
+
 
 @Entity
 public class Park {
@@ -20,15 +24,21 @@ public class Park {
 	@OneToMany(mappedBy="park")
 	private Collection<Review> reviews;
 	
+	@ManyToMany
+	private Collection<Category> categories;
+	
 	public Park() {
 		// don't put anything in here; it's a hook for JPA
 	}
-
 	
-	public Park(String parkName) {
+	public Park(String parkName, Category ...categories) {
 		this.parkName = parkName;
+		this.categories = Arrays.asList(categories);
 	}
 
+	public Collection<Category> getCategories() {
+		return categories;
+	}
 
 	public Long getId() {
 		return id;
