@@ -9,6 +9,8 @@ public interface ParkRepository extends CrudRepository <Park, Long>{
 
 	Park findByParkName(String parkName);
 
+	Object findAllById(Long id);
+
 	
 }
 
