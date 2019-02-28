@@ -1,9 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+
 <head>
-	<title></title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Categories</title>
 </head>
 <body>
+	<ul>
+		<li th:each ="category : ${category}">
+			<h3><a th:text = "${category.categoryName}" th:href="@{|/categories/${category.id}|}">Default</a></h3>
+
+
+
+
+		</li>
+
+	</ul>
+
+
 
 </body>
 </html>

@@ -14,9 +14,9 @@ create, read, update, and delete objects in the repository
 Note that CrudRepo has items listed as value, key  */
 public interface CategoryRepository extends CrudRepository<Category,Long> {
 
-	Category findByCategoryName(String categoryName);
+	//Category findByCategoryName(String categoryName);
 
-	Optional<Category> findById(Long id);
+	Object findAllById(Long categoryId);
 	
 	
 }

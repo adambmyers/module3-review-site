@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Single Park Reviews</title>
+</head>
+<body>
+	<ul>
+		<li th:each ="park : ${category.parks}">
+			<h3><a th:text = "${park.parkName}">Default</a></h3>
+
+
+
+
+		</li>
+
+	</ul>
+
+
+
+</body>
+</html>

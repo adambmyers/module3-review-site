@@ -12,7 +12,7 @@ import org.wecancodeit.Mod3.repositories.ParkRepository;
 import org.wecancodeit.Mod3.repositories.ReviewRepository;
 
 @Controller
-@RequestMapping("/categories") 
+//@RequestMapping("/categories") 
 
 public class CategoryController {
 	@Resource
@@ -22,15 +22,16 @@ public class CategoryController {
 	@Resource
 	ReviewRepository reviewRepo;
 	
-	@GetMapping("/categoryList")
+	@GetMapping("/categories/categoryList")
 	public String getCategoryList(Model model) {
 		model.addAttribute("category", categories.findAll());
 		return "/categories/categoryList";
 	}
-	@GetMapping("/{id}")
-	public String getSpecificCategory(@PathVariable Long id, Model model) {
-		model.addAttribute("park", parkRepo.findAllById(id));
-		return "/specificCategory";
+	@GetMapping("/categories/{categoryId}")
+	public String getParksByCategory(@PathVariable Long categoryId, Model model) {
+		model.addAttribute("category", categories.findAllById(categoryId));
+		
+		return "/categories/specificCategory";
 		
 	}
 
