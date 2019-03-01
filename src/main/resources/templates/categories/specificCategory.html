@@ -11,11 +11,7 @@
 <body>
 	<ul>
 		<li th:each= "park : ${category.parks}">
-			<h3><a th:text = "${park.parkName}">Default</a></h3>
-
-
-
-
+			<h3><a th:text = "${park.parkName}" th:href="@{|/park/${park.id}|}">Default</a></h3>
 		</li>
 
 	</ul>
