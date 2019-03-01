@@ -27,7 +27,8 @@ a.signin-button {
 }
 
 .grid-footer {
-  	background-color: white;
+		background-color: #000000;
+		color: #ffffff;
   	opacity:.8;
   	padding: 1.2rem;
 	}
