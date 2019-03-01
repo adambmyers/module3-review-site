@@ -11,33 +11,39 @@
 
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
-
-
-    <body>
-    <div class="grid-body">
-        <header class="grid-header">
-        <a href="">logo<img src=""></a><!--This will hold our icon-->
-
-        <!-- <a href="/signin/signin" class="signin-button">Log In/Sign Up</a> -->
-        
-        <a href="/parks/addParks">Review a Park</a>
-
+<body>
+    <div class="wrapper">
+      <div class="grid-header">  
+        <header>
+          <figure id="logo">
+            <a href="/"><img src="cbusparks.png" alt="CBus Parks logo"></a><!--This will hold our icon-->
+          </figure>
+          <!-- <a href="/signin/signin" class="signin-button">Log In/Sign Up</a> -->
+          <a href="/parks/addParks">Review a Park</a>
         </header>
-        
-        <div class="grid-main">
-        <main>
-            <h1 id="center">Columbus Parks & Rec</h1>
-          <button><a href = "/categories/categoryList">User</a></button>
-          <button><a href = "/categories/categoryList">Admin</a></button>
-        </main>
-        </div>
-        
-        <footer class-"grid-footer">
-          <p>things</p>
-        </footer>
-        </div>
-    </div>
-    </body>
+      </div>
 
+      <div class="grid-main">
+          <main>
+            <h1 id="center">Columbus Parks & Rec</h1>
+            <button><a href = "/categories/categoryList">User</a></button>
+            <button><a href = "/categories/categoryList">Admin</a></button>
+          </main>
+      </div>
+        
+      <div class="grid-footer">
+        <footer>
+          <ul>
+            <a href="/"><li>Sign In</li></a>
+            <a href="/categories/categoryList"><li>Categories</li></a>
+          </ul>
+          <p>CBus Parks and Rec,</p>
+          <script type="text/javascript">
+            document.write(new Date().getFullYear());
+          </script>
+        </footer>
+      </div>
+    </div>
+  </body>
 </html>
   
