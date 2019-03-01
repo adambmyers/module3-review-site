@@ -20,7 +20,7 @@ public class Category {
 	private String categoryDescription;
 	
 	
-	@ManyToMany(mappedBy="categories")
+	@ManyToMany (mappedBy="categories")
 	private Collection<Park> parks;
 	
 	public Category() {
