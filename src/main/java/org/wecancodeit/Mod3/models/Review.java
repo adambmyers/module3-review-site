@@ -1,10 +1,16 @@
 package org.wecancodeit.Mod3.models;
 
+import java.util.Arrays;
+import java.util.Collection;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+
+
 
 @Entity
 public class Review {
@@ -28,16 +34,20 @@ public class Review {
 	@ManyToOne
 	private Park park;
 	
+	@OneToMany
+	private Collection<Comment> comments;
 	
+
 	public Review() {
 		//don't use; JPA hook
 	}
 	
-	public Review(String title, String imageUrl, String review, Park park) {
+	public Review(String title, String imageUrl, String review, Park park, Comment ...comments) {
 		this.title = title;
 		this.imageUrl= imageUrl;
 		this.review = review;
 		this.park = park;
+		this.comments = Arrays.asList(comments);
 		
 	}
 	
@@ -55,6 +65,10 @@ public class Review {
 	
 	public String getReview() {
 		return review;
+	}
+	
+	public Collection<Comment> getComments() {
+		return comments;
 	}
 	
 
