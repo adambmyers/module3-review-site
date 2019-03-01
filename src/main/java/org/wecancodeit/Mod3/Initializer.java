@@ -25,11 +25,11 @@ public class Initializer implements CommandLineRunner {
 
 	@Override            //jdbc:h2:mem:testdb
 	public void run(String... args) throws Exception {
-		Category category1 = categoryRepo.save(new Category("Dog Park"));
-		Category category2 = categoryRepo.save(new Category("Hiking Park"));
-		Category category3 = categoryRepo.save(new Category("Bird Watching Park"));
-		Category category4 = categoryRepo.save(new Category("Event Park"));
-		Category category5 = categoryRepo.save(new Category("Family-Friendly Park"));
+		Category category1 = categoryRepo.save(new Category("Dog Parks", "We know how much dogs love to go to the park! These parks have off-the-leash areas where your furry friend can really enjoy themselves. You can help develop a dogs' positive behavior by letting them socialize, and perhaps you may even make a friend of your own."));
+		Category category2 = categoryRepo.save(new Category("Hiking Parks", "In a city surrounded by great parks, adventure is never far away. And we've made it even easier to find with our list of incredible Columbus hiking spots!"));
+		Category category3 = categoryRepo.save(new Category("Bird Watching Parks", "Are you a bird lover looking for the best bird watching spots in Columbus? Look no further!"));
+		Category category4 = categoryRepo.save(new Category("Event Parks", "These Columbus parks are great options to host an event or gathering. Many of these parks also host art and musical festivals throughout the year."));
+		Category category5 = categoryRepo.save(new Category("Family-Friendly Parks", "These Columbus parks offer child-friendly ammenties like changing rooms, playsets and splash pads."));
 
 		Park park1 = parkRepo.save(new Park("Alum Creek Park", category1));
 		Park park2 = parkRepo.save(new Park("Blendon Woods Metro Park", category2));

@@ -1,12 +1,12 @@
 package org.wecancodeit.Mod3.models;
 
 import java.util.ArrayList;
-
 import java.util.Collection;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.ManyToMany;
 
 @Entity
@@ -16,6 +16,8 @@ public class Category {
 	@GeneratedValue
 	private Long id;
 	private String categoryName;
+	@Lob
+	private String categoryDescription;
 	
 	
 	@ManyToMany(mappedBy="categories")
@@ -25,8 +27,9 @@ public class Category {
 		//JPA hook; do not change
 	}
 	
-	public Category(String categoryName) {
+	public Category(String categoryName, String categoryDescription) {
 		this.categoryName = categoryName;
+		this.categoryDescription = categoryDescription;
 		this.parks = new ArrayList<>();
 	}
 	
@@ -38,6 +41,11 @@ public class Category {
 	public String getCategoryName() {
 		return categoryName;
 	}
+	
+	public String getCategoryDescription() {
+		return categoryDescription;
+	}
+	
 	
 	public Long getId() {
 		return id;
