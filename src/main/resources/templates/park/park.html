@@ -6,16 +6,15 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <title>Single Park Reviews</title>
+   <title>Single Park's Reviews</title>
 </head>
 <body>
 	<ul>
-		<li th:each ="park : ${category.parks}">
-			<h3><a th:text = "${park.parkName}">Default</a></h3>
-
-
-
-
+		<li th:each ="review : ${park.reviews}">
+			<h3><a th:text = "${review.title}" th:href="@{|/reviews/${review.id}|}">Default</a></h3>
+			<h4>
+				<span th:text = "${review.review}">Default</span>
+			</h4>
 		</li>
 
 	</ul>
