@@ -16,7 +16,6 @@ import org.wecancodeit.Mod3.repositories.ParkRepository;
 import org.wecancodeit.Mod3.repositories.ReviewRepository;
 
 @Controller
-@RequestMapping("/reviews")
 public class ReviewController {
 
 	@Resource
@@ -33,17 +32,12 @@ public class ReviewController {
 		// within addAttribute, "parks" = name of the thing we're finding
 		// parks.findAll = finding all "parks"
 	//pull up specific review
-	@GetMapping("/review/{id}")
-	public String getReview(@PathVariable Long id, Model model) {
-		model.addAttribute("review", reviewRepo.findById(id).get());
-		return "/review/individualReview";
+	@GetMapping("/reviews/{reviewId}")
+	public String getReview(@PathVariable Long reviewId, Model model) {
+		model.addAttribute("review", reviewRepo.findById(reviewId).get());
+		return "/reviews/individualReview";
 	}
 	
-	@GetMapping("/addReview")
-	public String getParkForm(Model model) {
-		model.addAttribute("parks", parkRepo.findAll());
-		return "parks/addReview";
-	}
 	
 	//@post allows us to add information to our reviews repo.  
 //	@PostMapping("/addReview")

@@ -22,17 +22,18 @@ public class CategoryController {
 	@Resource
 	ReviewRepository reviewRepo;
 	
+	//gets a list of all categories on the categoryList html page
 	@GetMapping("/categories/categoryList")
 	public String getCategoryList(Model model) {
 		model.addAttribute("category", categories.findAll());
 		return "/categories/categoryList";
 	}
+	
+	//navigates to the page of a specific category and shows all parks in the category
 	@GetMapping("/categories/{categoryId}")
 	public String getParksByCategory(@PathVariable Long categoryId, Model model) {
 		model.addAttribute("category", categories.findAllById(categoryId));
-		
-		return "/categories/specificCategory";
-		
+		return "/categories/specificCategory";	
 	}
 
 }
