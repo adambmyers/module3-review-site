@@ -38,31 +38,6 @@ public class ReviewController {
 		return "/reviews/individualReview";
 	}
 	
-	
-	//@post allows us to add information to our reviews repo.  
-//	@PostMapping("/addReview")
-//	public String addPark(
-//			String title, 
-//			String imageUrl,
-//			String review,
-//			String categoryName,
-//			String parkName
-//			
-//		) 
-//			
-//			Category category = categoryRepo.findByCategoryName(categoryName); //addGet
-//			category = categoryRepo.save(new Category(categoryName));
-		
-//			Park park = parkRepo.findByParkName(parkName);
-//			park = parkRepo.save(new Park(parkName); 
-			
-	
-			
-//			reviewRepo.save(new Review(title, imageUrl, review, category, park));
-//return below redirects our review add from above and display it to the page below
-//			return "redirect:/parks/addReview";
-//	}
-
 }
 	
 	
