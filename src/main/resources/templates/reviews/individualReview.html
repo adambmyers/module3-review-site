@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/css/people.css">
 </head>
 <body>
+	<!-- List park type, name, location (see CategoryController, and Park model=mapped by "park")-->
     <div th:style="|background-color: ${park.type}|" class="container">
         <h1 th:text="${park.name}">Default Location</h1>
         <h2 th:text="${park.location}">Default Location</h2>

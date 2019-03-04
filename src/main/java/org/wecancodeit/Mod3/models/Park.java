@@ -10,27 +10,32 @@ import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 
 
-
+//Lets Spring know the class category is part of MVC model
 @Entity
 public class Park {
 	
+	// Assigns ID for each category
+	// id for each park is initialized here
 	@Id
 	@GeneratedValue
-	// id for each park is initialized here
 	private Long id;  
 	private String parkName;
 
-	
-	@OneToMany(mappedBy="park")
+	// Each park stores multiple reviews.  We build collection of reviews and link it here
+	// "park" - call on this inside controller - links this model and allows it to be called in ThymeLeaf - see CategoryController TH
+	@OneToMany(mappedBy="park") 
 	private Collection<Review> reviews;
 	
+	// Creates collection called categories inside Park
 	@ManyToMany
 	private Collection<Category> categories;
 	
 	public Park() {
-		// don't put anything in here; it's a hook for JPA
+		// hook for JPA
 	}
 	
+	// Constructor for Park - we are adding a collection (categories) to constructor
+	// This collection is not inside of Category model because Park owns the relationship (need a park to have a category)
 	public Park(String parkName, Category ...categories) {
 		this.parkName = parkName;
 		this.categories = Arrays.asList(categories);
@@ -40,6 +45,10 @@ public class Park {
 		return categories;
 	}
 
+	public Collection<Review> getReviews(){
+		return reviews;
+	}
+	
 	public Long getId() {
 		return id;
 	}
@@ -48,10 +57,7 @@ public class Park {
 		return parkName;
 	}
 	
-	public Collection<Review> getReviews(){
-		return reviews;
-	}
-
+	// Makes objects readable
 	@Override
 	public String toString() {
 		return "Park [id=" + id + ", parkName=" + parkName + ", reviews=" + reviews + "]";

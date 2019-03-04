@@ -27,6 +27,7 @@ public class CategoryController {
 		model.addAttribute("category", categories.findAll());
 		return "/categories/categoryList";
 	}
+	// "park" see Park model "mapped by"
 	@GetMapping("/{id}")
 	public String getSpecificCategory(@PathVariable Long id, Model model) {
 		model.addAttribute("park", parkRepo.findAllById(id));

@@ -11,6 +11,6 @@ create, read, update, and delete objects in the repository
 Note that CrudRepo has items listed as value, key  */
 public interface ReviewRepository extends CrudRepository<Review,Long> {
 
-	
+	// Going to need to be able to delete as admin
 	}
 

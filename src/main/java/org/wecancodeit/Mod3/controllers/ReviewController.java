@@ -45,7 +45,7 @@ public class ReviewController {
 		return "parks/addReview";
 	}
 	
-	//@post allows us to add information to our reviews repo.  
+	//@post allows us to add information to our reviews repo.  See PostMapping in addReview
 	@PostMapping("/addReview")
 	public String addPark(
 			String title, 

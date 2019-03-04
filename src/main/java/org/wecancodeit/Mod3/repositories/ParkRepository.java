@@ -7,6 +7,7 @@ import org.wecancodeit.Mod3.models.Park;
 @Repository
 public interface ParkRepository extends CrudRepository <Park, Long>{
 
+	// Tells TH how to find Park
 	Park findByParkName(String parkName);
 
 	Object findAllById(Long id);

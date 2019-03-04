@@ -16,14 +16,12 @@ public class Review {
 	private String title;
 	//imageUrl used to pull a picture for the park under review
 	private String imageUrl;
-	//private Category categoryName;
-	//private Park parkName;
 
 	@Lob
 	// @Lob is used to allow for more than 255 chars per String
 	private String review;
 	
-//	@ManyToOne //see here if front end issues - took away on @ManyToOne to refactor
+//	@ManyToOne 
 //	private Category category; 
 	@ManyToOne
 	private Park park;
