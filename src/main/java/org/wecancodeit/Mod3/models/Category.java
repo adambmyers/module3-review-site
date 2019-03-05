@@ -30,7 +30,7 @@ public class Category {
 	public Category(String categoryName, String categoryDescription) {
 		this.categoryName = categoryName;
 		this.categoryDescription = categoryDescription;
-		this.parks = new ArrayList<>();
+//		this.parks = new ArrayList<>();
 	}
 	
 	@Override

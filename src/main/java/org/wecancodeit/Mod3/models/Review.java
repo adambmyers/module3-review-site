@@ -67,6 +67,10 @@ public class Review {
 		return review;
 	}
 	
+	public Park getPark() {
+		return park;
+	}
+	
 	public Collection<Comment> getComments() {
 		return comments;
 	}

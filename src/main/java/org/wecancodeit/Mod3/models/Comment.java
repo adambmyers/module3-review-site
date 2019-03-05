@@ -22,8 +22,9 @@ public class Comment {
 	@ManyToOne
 	private Review review;
 	
-	public Comment(String commentContent) {
+	public Comment(String commentContent, Review review) {
 		this.commentContent = commentContent;
+		this.review = review;
 	}
 
 
@@ -33,6 +34,10 @@ public class Comment {
 
 	public String getCommentContent() {
 		return commentContent;
+	}
+
+	public Review getReview() {
+		return review;
 	}
 	
 	@Override
