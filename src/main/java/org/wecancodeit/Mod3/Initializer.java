@@ -37,14 +37,6 @@ public class Initializer implements CommandLineRunner {
 		Category category4 = categoryRepo.save(new Category("Event Parks", "These Columbus parks are great options to host an event or gathering. Many of these parks also host art and musical festivals throughout the year."));
 		Category category5 = categoryRepo.save(new Category("Family-Friendly Parks", "These Columbus parks offer child-friendly ammenties like changing rooms, playsets and splash pads."));
 
-		Comment comment1 = commentRepo.save(new Comment("I disagree with this review."));
-		Comment comment2 = commentRepo.save(new Comment("This review is funny."));
-		Comment comment3 = commentRepo.save(new Comment("I think this park is the best - I agree!"));
-		Comment comment4 = commentRepo.save(new Comment("I agree with this review."));
-		Comment comment5 = commentRepo.save(new Comment("This review is not funny."));
-		Comment comment6 = commentRepo.save(new Comment("I think this park is so dirty!"));
-		Comment comment7 = commentRepo.save(new Comment("This review is stupid."));
-
 
 		Park park1 = parkRepo.save(new Park("Alum Creek Park", "", "", "", "", category1, category2));
 		Park park2 = parkRepo.save(new Park("Wheeler Dog Park", "", "", "", "", category1));
@@ -58,21 +50,30 @@ public class Initializer implements CommandLineRunner {
 		Park park10 = parkRepo.save(new Park("Franklin Park Conservatory & Botanical Gardens", "", "", "", "", category5, category4, category3));
 		Park park11 = parkRepo.save(new Park("Fancyberg Park", "", "", "", "", category5));
 
-		reviewRepo.save(new Review("Perfect Park", "park.com", "The park is great!", park1, comment1));
-		reviewRepo.save(new Review("Happy Park", "park.com", "The park is fun!", park2, comment2));
-		reviewRepo.save(new Review("Confusing Park", "park.com", "The park is not fun!", park3, comment3));
-		reviewRepo.save(new Review("Excitement Park", "park.com", "The park is too much fun!", park4, comment4));
-		reviewRepo.save(new Review("Boring Park", "park.com", "I do not like this park!", park5, comment5));
-		reviewRepo.save(new Review("Perfect Park", "park.com", "The park is great!", park6, comment6));
-		reviewRepo.save(new Review("Happy Park", "park.com", "The park is fun!", park7, comment7));
-		reviewRepo.save(new Review("Confusing Park", "park.com", "The park is not fun!", park8));
-		reviewRepo.save(new Review("Excitement Park", "park.com", "The park is too much fun!", park9));
-		reviewRepo.save(new Review("Boring Park", "park.com", "I do not like this park!", park10));
-		reviewRepo.save(new Review("Perfect Park", "park.com", "The park is great!", park11));
-		reviewRepo.save(new Review("Happy Park", "park.com", "The park is fun!", park1));
-		reviewRepo.save(new Review("Confusing Park", "park.com", "The park is not fun!", park2));
-		reviewRepo.save(new Review("Excitement Park", "park.com", "The park is too much fun!", park3));
-		reviewRepo.save(new Review("Boring Park", "park.com", "I do not like this park!", park4));
+		Review review1 = reviewRepo.save(new Review("Perfect Park", "park.com", "The park is great!", park1));
+		Review review2 =reviewRepo.save(new Review("Happy Park", "park.com", "The park is fun!", park2));
+		Review review3 =reviewRepo.save(new Review("Confusing Park", "park.com", "The park is not fun!", park3));
+		Review review4 =reviewRepo.save(new Review("Excitement Park", "park.com", "The park is too much fun!", park4));
+		Review review5 =reviewRepo.save(new Review("Boring Park", "park.com", "I do not like this park!", park5));
+		Review review6 =reviewRepo.save(new Review("Perfect Park", "park.com", "The park is great!", park6));
+		Review review7 =reviewRepo.save(new Review("Happy Park", "park.com", "The park is fun!", park7));
+		Review review8 =reviewRepo.save(new Review("Confusing Park", "park.com", "The park is not fun!", park8));
+		Review review9 =reviewRepo.save(new Review("Excitement Park", "park.com", "The park is too much fun!", park9));
+		Review review10 =reviewRepo.save(new Review("Boring Park", "park.com", "I do not like this park!", park10));
+		Review review11 =reviewRepo.save(new Review("Perfect Park", "park.com", "The park is great!", park11));
+		Review review12 =reviewRepo.save(new Review("Happy Park", "park.com", "The park is fun!", park1));
+		Review review13 =reviewRepo.save(new Review("Confusing Park", "park.com", "The park is not fun!", park2));
+		Review review14 =reviewRepo.save(new Review("Excitement Park", "park.com", "The park is too much fun!", park3));
+		Review review15 =reviewRepo.save(new Review("Boring Park", "park.com", "I do not like this park!", park4));
+		
+		Comment comment1 = commentRepo.save(new Comment("I disagree with this review.", review1));
+		Comment comment2 = commentRepo.save(new Comment("This review is funny.", review2));
+		Comment comment3 = commentRepo.save(new Comment("I think this park is the best - I agree!", review2));
+		Comment comment4 = commentRepo.save(new Comment("I agree with this review.", review3));
+		Comment comment5 = commentRepo.save(new Comment("This review is not funny.", review4));
+		Comment comment6 = commentRepo.save(new Comment("I think this park is so dirty!", review5));
+		Comment comment7 = commentRepo.save(new Comment("This review is stupid.", review6));
+		
 	}
 
 }
