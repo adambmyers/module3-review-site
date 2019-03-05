@@ -1,17 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/people.css">
+    <title>Review</title>
 </head>
+
 <body>
-    <div th:style="|background-color: ${park.type}|" class="container">
-        <h1 th:text="${park.name}">Default Location</h1>
-        <h2 th:text="${park.location}">Default Location</h2>
-    </div>
+	<main>
+		<h1 th:text = "${review.park.parkName}">Park Name Here...</h1>
+			<!-- <h3 th:text = "${park.parkName}">Default</h3>
+ -->
+        <h2>
+        	<span th:text = "${review.title}">Default</span>
+        </h2>
+        	<!-- <span th:text = "${review.park}">Default</span> -->
+        <h3>
+            <span th:text = "${review.review}">Default</span>
+        </h3>
+
+        <form th:action="@{|/reviews/${review.id}|}" method="POST">
+			<label>Add a comment here:<input type="text" name="commentContent"/></label>
+			<button type="submit">Submit</button>
+		</form>
+
+        <h3>Comments</h3>
+        	<ul>
+        		<li th:each ="comment : ${review.comments}">
+        			<h4 th:text = "${comment.commentContent}">Default</a></h4>
+        		</li>
+        	</ul>
+
+    </main>
 </body>
 </html>

@@ -4,11 +4,16 @@
 }
 
 html {
-	background-image: url(https://www.publicdomainpictures.net/pictures/10000/velka/moonlight-landscape-11287160000RlIy.jpg);
-	background-repeat: no-repeat;
+	background-image: url("../forest-trail.jpg");
+	background-color: #5faf1b;
 	background-size: cover;
 	background-position: center;  
-	}
+}
+
+.wrapper {
+	display: grid;
+	grid-template-rows: 1fr 3fr 1fr;
+}
 
 .grid-header {
 	box-shadow: 0 1px 9px -2px #FFFFFF;
@@ -19,24 +24,31 @@ html {
 	justify-content: space-between;
 	padding: 1.2rem; 
 	margin-bottom: 3px;
+}
+
+.grid-main {
+		display: flex;
+		justify-content: center;
+		align-items: center;   
 	}
+	
+.grid-footer {
+		background-color: #000000;
+		color: #ffffff;
+		opacity:.8;
+		padding: 1.2rem;
+	}
+
+#logo {
+	
+}
 
 a.signin-button {
 	text-decoration: none;
 	color: white;
 }
 
-.grid-footer {
-  	background-color: white;
-  	opacity:.8;
-  	padding: 1.2rem;
-	}
 
-.grid-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;   
-	}
 
 #center {
   	margin-top:5rem;
