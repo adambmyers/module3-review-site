@@ -16,8 +16,9 @@
 	<section>
 		<ul>
 			<li th:each="category : ${category}">
+				<img th:src="@{${'../../' + category.imageUrl + '.jpg'}}">
+				<h3 th:text="${category.categoryDescription}"></h3>
 				<h3><a th:text="${category.categoryName}" th:href="@{|/categories/${category.id}|}">Default</a></h3>
-				<h2 th:text="${category.categoryDescription}"></h2>
 			</li>
 		</ul>
 	</section>
