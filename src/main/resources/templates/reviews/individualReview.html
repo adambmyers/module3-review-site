@@ -29,8 +29,7 @@
         <h3>Comments</h3>
         	<ul>
         		<li th:each ="comment : ${review.comments}">
-        			<h4><a th:text = "${comment.commentContent}" th:href="@{|/reviews/${review.id}|}">Default</a></h4>
-        			<!-- <h4 th:text = "${comment.commentContent}">Default</h4> -->
+        			<h4 th:text = "${comment.commentContent}">Default</a></h4>
         		</li>
         	</ul>
 

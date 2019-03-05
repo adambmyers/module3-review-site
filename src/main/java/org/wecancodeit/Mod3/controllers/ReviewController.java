@@ -37,31 +37,12 @@ public class ReviewController {
 		// within addAttribute, "parks" = name of the thing we're finding
 		// parks.findAll = finding all "parks"
 	//pull up specific review
-//	@GetMapping("/park/{parkId}")
-//	public String getReviewsByPark(@PathVariable Long parkId, Model model) {
-//		model.addAttribute("park", parkRepo.findById(parkId).get());
-//		return "/park/park";
-//	}
+
 	@GetMapping("/reviews/{reviewId}")
 	public String getCommentsByReview(@PathVariable Long reviewId, Model model) {
 		model.addAttribute("review", reviewRepo.findById(reviewId).get());
 		return "/reviews/individualReview";
 	}
-	
-//	@PostMapping("/park/{parkId}")
-//	public String addReview(
-//			@PathVariable Long parkId,
-//			String title, 
-//			String imageUrl,
-//			String review,
-//			Park park
-//		) {
-//			Park park1 = parkRepo.findById(parkId).get();
-//			reviewRepo.save(new Review(title, imageUrl, review, park1));
-//			
-//return below redirects our review add from above and display it to the page below
-//			return "redirect:/park/" + parkId;
-//	}
 
 	@PostMapping("/reviews/{reviewId}")
 	public String addComment(

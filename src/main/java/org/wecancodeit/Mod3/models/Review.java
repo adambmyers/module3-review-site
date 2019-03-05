@@ -47,7 +47,8 @@ public class Review {
 		this.imageUrl= imageUrl;
 		this.review = review;
 		this.park = park;
-		this.comments = Arrays.asList(comments);
+		// do not think we need the line below, b/c taking it out didn't change functionality of website
+//		this.comments = Arrays.asList(comments);
 		
 	}
 	
