@@ -10,15 +10,14 @@
 </head>
 <body>
 	<section>
-		<h1>
-			Welcome to CBUS Parks & Rec! To get started with your park search, select a park category below. 
-		</h1>
+		<h1>Welcome to CBUS Parks & Rec!</h1>
+		<h2>To get started with your park search, select a park category below.</h2>
 	</section>
 	<section>
 		<ul>
 			<li th:each="category : ${category}">
-				<h3 th:text="${category.categoryDescription}"></h3>
 				<h3><a th:text="${category.categoryName}" th:href="@{|/categories/${category.id}|}">Default</a></h3>
+				<h2 th:text="${category.categoryDescription}"></h2>
 			</li>
 		</ul>
 	</section>
