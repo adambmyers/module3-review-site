@@ -8,7 +8,17 @@
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <title>Single Park's Reviews</title>
 </head>
+
 <body>
+	<form th:action="|/park/${park.id}|" method="POST">
+		<h3>Add a review for this park</h3>
+		<label>Title: <input type="text" name="title"/></label>
+		<label>Image URL: <input type="text" name="imageUrl"/></label>
+		<label>Review: <input type="text" name="review"/></label>
+		<<!-- input type="hidden" name="park" value="${park.id}"/> -->
+		<button type="submit">Submit</button>
+	</form>
+
 	<ul>
 		<li th:each ="review : ${park.reviews}">
 			<h3><a th:text = "${review.title}" th:href="@{|/reviews/${review.id}|}">Default</a></h3>
@@ -16,7 +26,6 @@
 				<span th:text = "${review.review}">Default</span>
 			</h4>
 		</li>
-
 	</ul>
 
 
