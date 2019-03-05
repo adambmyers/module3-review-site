@@ -34,7 +34,7 @@ public class Review {
 	@ManyToOne
 	private Park park;
 	
-	@OneToMany
+	@OneToMany(mappedBy="review")
 	private Collection<Comment> comments;
 	
 
