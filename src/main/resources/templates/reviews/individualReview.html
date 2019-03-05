@@ -21,7 +21,7 @@
             <span th:text = "${review.review}">Default</span>
         </h3>
 
-        <form th:action="|/reviews/${review.id}|" method="POST">
+        <form th:action="@{|/reviews/${review.id}|}" method="POST">
 			<label>Add a comment here:<input type="text" name="commentContent"/></label>
 			<button type="submit">Submit</button>
 		</form>

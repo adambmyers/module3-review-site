@@ -10,7 +10,7 @@
 </head>
 
 <body>
-	<form th:action="|/park/${park.id}|" method="POST">
+	<form th:action="@{|/park/${park.id}|}" method="POST">
 		<h3>Add a review for this park</h3>
 		<label>Title: <input type="text" name="title"/></label>
 		<label>Image URL: <input type="text" name="imageUrl"/></label>
