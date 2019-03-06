@@ -1,0 +1,55 @@
+li {
+    list-style: none;
+}
+
+.grid-footer {
+    background-color: #000000;
+    color: #ffffff;
+    opacity: .8;
+    padding: 1.2rem;
+    margin-top: 3rem;
+}
+
+.grid-header {
+    box-shadow: 0 1px 9px -2px #FFFFFF;
+    background-color: black;
+    opacity: .8;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.2rem;
+    margin-bottom: 3rem;
+}
+
+#logo {
+    margin-left: 2rem;
+}
+
+.grid-header__parkname {
+    color: white;
+}
+
+.background {
+    background-image: url("../forest-trail.jpg");
+    background-color: #5faf1b;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container__body {
+    padding-top: 1rem;
+    text-align: center;
+    max-width: 100em;
+    width: 90%;
+    background-color: white;
+    align-self: center;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
