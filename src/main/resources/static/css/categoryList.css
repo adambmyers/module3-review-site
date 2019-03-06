@@ -12,6 +12,10 @@ a {
     color: black;
 }
 
+li {
+    list-style: none;
+}
+
 .background {
     background-image: url("../forest-trail.jpg");
     background-color: #5faf1b;
