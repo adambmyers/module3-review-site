@@ -1,12 +1,12 @@
-.bullets{
-    list-style-type: none;
-}
 
 * {
     margin: 0;
     padding: 0;
 }
 
+.html {
+    /* font-size: 2em; */
+}
 
 a {
     text-decoration: none;
@@ -75,7 +75,6 @@ a {
     margin-bottom: 3rem;
 }
 
-.grid-main {}
 
 .grid-footer {
     background-color: #000000;
@@ -88,5 +87,6 @@ a {
 #logo {
     margin-left: 2rem;
 }
+
 
 

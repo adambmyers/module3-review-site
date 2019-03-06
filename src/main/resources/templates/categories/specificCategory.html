@@ -7,12 +7,11 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <title>Specific Categories Park List</title>
-   <link rel="stylesheet" type="text/css" href="../../static/css/categoryList.css">
+   <link rel="stylesheet" type="text/css" href="../../css/specificCategory.css">
 
 </head>
 <div class="background">
 <body>
-	
 	<div class="grid-header">
 		<header>
 			<figure id="logo">
@@ -25,22 +24,22 @@
 				<h1>Welcome to CBUS Parks & Rec!</h1>
 				<h2>To continue with your park search, select a specific park below.</h2>
 			</section>
-		<ul class="container__category">
+		<ul class="container__category" th:each= "park : ${category.parks}">
 			<div class="container__category--texts">
-				<li class="container__category--name" th:each= "park : ${category.parks}">
-					<h3><a th:text = "${park.parkName}" th:href="@{|/park/${park.id}|}">Default</a></h3>
+				<li class="container__category--name">
+					<h3><a th:text = "${park.parkName}" th:href="@{|/categories/${park.id}|}">Default</a></h3>
 				</li>
 				
-				<li class="container__category--description" th:each= "park : ${park.location}">
-						<h3><a th:text = "${park.location}" th:href="@{|/park/${park.location}|}">Default</a></h3>
+				<li class="container__category--description">
+						<h3><a th:text = "${park.location}" th:href="@{|/categories/${park.location}|}">Default</a></h3>
 					</li>
 
-				<li class="container__category--description" th:each= "park : ${park.website}">
-					<h3><a th:text = "${park.website}" th:href="@{|/park/${park.website}|}">Default</a></h3>
+				<li class="container__category--description">
+					<h3><a th:text = "${park.website}" th:href="@{|/categories/${park.website}|}">Default</a></h3>
 				</li>
 
-				<li class="container__category--description" th:each= "park : ${park.description}">
-						<h3><a th:text = "${park.description}" th:href="@{|/park/${park.description}|}">Default</a></h3>
+				<li class="container__category--description">
+						<h3><a th:text = "${park.description}" th:href="@{|/categories/${park.description}|}">Default</a></h3>
 				</li>
 			</div> 
 				<li class="container__category--image">
@@ -49,7 +48,6 @@
 				</li>
 		</ul>
 	</div>
-</body>
 <div class="grid-footer">
 	<footer>
 		<p>CBus Parks and Rec,</p>
@@ -58,6 +56,7 @@
 	</script> -->
 	</footer>
 </div>
+</body>
 </div>
 
 </html>
