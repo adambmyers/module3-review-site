@@ -7,16 +7,57 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <title>Specific Categories Park List</title>
+   <link rel="stylesheet" type="text/css" href="../../static/css/specificCategory.css">
+
 </head>
+<div class="background">
 <body>
-	<ul>
-		<li th:each= "park : ${category.parks}">
-			<h3><a th:text = "${park.parkName}" th:href="@{|/park/${park.id}|}">Default</a></h3>
-		</li>
+	
+	<div class="grid-header">
+		<header>
+			<figure id="logo">
+				<a href="/"><img src="../cbusparks.png" alt="CBus Parks logo"></a>
+			</figure>
+		</header>
+	</div>
+	<div class="container__body">
+			<section>
+				<h1>Welcome to CBUS Parks & Rec!</h1>
+				<h2>To continue with your park search, select a specific park below.</h2>
+			</section>
+		<ul class="container__category">
+			<div class="container__category--texts">
+				<li class="container__category--name" th:each= "park : ${category.parks}">
+					<h3><a th:text = "${park.parkName}" th:href="@{|/park/${park.id}|}">Default</a></h3>
+				</li>
+				
+				<li class="container__category--description" th:each= "park : ${park.location}">
+						<h3><a th:text = "${park.location}" th:href="@{|/park/${park.location}|}">Default</a></h3>
+					</li>
 
-	</ul>
+				<li class="container__category--description" th:each= "park : ${park.website}">
+					<h3><a th:text = "${park.website}" th:href="@{|/park/${park.website}|}">Default</a></h3>
+				</li>
 
-
-
+				<li class="container__category--description" th:each= "park : ${park.description}">
+						<h3><a th:text = "${park.description}" th:href="@{|/park/${park.description}|}">Default</a></h3>
+				</li>
+			</div> 
+				<li class="container__category--image">
+					<a th:href="@{|/parks/${park.parkImageUrl}|}"><img
+							th:src="@{${'../../' + park.parkImageUrl + '.jpg'}}"></a>
+				</li>
+		</ul>
+	</div>
 </body>
+<div class="grid-footer">
+	<footer>
+		<p>CBus Parks and Rec,</p>
+		<!-- <script type="text/javascript">
+		document.write(new Date().getFullYear());
+	</script> -->
+	</footer>
+</div>
+</div>
+
 </html>
