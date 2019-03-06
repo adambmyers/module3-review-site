@@ -21,8 +21,8 @@
 		</header>
 		<div class="container__body">
 			<form th:action="@{|/park/${park.id}|}" method="POST">
-				<h3>Add a review for this park</h3>
-				<label>Title: <input type="text" name="title" id="review-box-title"/></label><br>
+				<h3 class="review-instructions">Add a review for this park</h3>
+				<label class="review-title">Title: <input type="text" name="title" id="review-box-title"/></label><br>
 				<!-- <label>Image URL: <input type="text" name="imageUrl" /></label> -->
 				<label>Review: <input type="text" name="review" id="review-text-box"/></label><br>
 				<!-- input type="hidden" name="park" value="${park.id}" /> -->
