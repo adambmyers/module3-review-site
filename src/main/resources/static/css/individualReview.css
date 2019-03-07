@@ -151,16 +151,3 @@ input[type="text"] {
     height: 3rem;
 }
 
-input[type="submit"] {
-    width: 100%;
-}
-
-#topPic{
-    height:3.1rem;
-    width:2.7rem;
-}
-
-#button{
-    width: 5 rem;
-    height: 2 rem;
-}

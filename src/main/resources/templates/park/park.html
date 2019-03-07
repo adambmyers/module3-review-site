@@ -20,41 +20,42 @@
 				<h1 th:text="${park.parkName}">Park Name Here...</h1>
 			</div>
 		</header>
-		<div class="container__body">
-			<div class="container__grid">
+		
+			<div class="container__body">
 
 				<div class="review-instructions">
 					<form th:action="@{|/park/${park.id}|}" method="POST">
-						<h2>Add a review for this park</h2>
-				
+						<h2 th:text="@{|What do you think of ${park.parkName}?|}"></h2>
+						<p>Write your review here:</p>
 
-				<section class="review-title">
-					<div class="title_text"><input type="text" name="title" placeholder="Title:"/></div>
-				</section>
-				
 
-				<section class="review__content">
-					<div class="review_input"><input type="text" name="review" placeholder="Review:"/></div>
-					
-				</section>
+						<section class="review-title">
+							<div class="title_text"><input type="text" name="title" placeholder="Review Title:" /></div>
+						</section>
 
-				<div class="review__button">
-					<button type="submit">Submit</button>
+
+						<section class="review__content">
+							<div class="review_input"><input type="text" name="review" placeholder="Review:" /></div>
+
+						</section>
+
+						<div class="review__button">
+							<button type="submit">SUBMIT REVIEW</button>
+						</div>
+
+					</form>
 				</div>
-
-			</form>
+				<ul th:each="review : ${park.reviews}" class="old-reviews">
+					<li>
+						<h3><a th:text="${review.title}" th:href="@{|/reviews/${review.id}|}">Default</a></h3>
+					</li>
+					<li>
+						<h4>
+							<span th:text="${review.review}">Default</span>
+						</h4>
+					</li>
+				</ul>
 			</div>
-			<ul th:each="review : ${park.reviews}">
-				<li>
-					<h3><a th:text="${review.title}" th:href="@{|/reviews/${review.id}|}">Default</a></h3>
-				</li>
-				<li>
-					<h4>
-						<span th:text="${review.review}">Default</span>
-					</h4>
-				</li>
-			</ul>
-		</div>
 	</body>
 	<div class="grid-footer">
 		<footer>
