@@ -7,16 +7,74 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <title>Specific Categories Park List</title>
+   <link rel="stylesheet" type="text/css" href="../../css/specificCategory.css">
+
 </head>
+
+<!-------------------->
+<div class="background">
 <body>
-	<ul>
-		<li th:each= "park : ${category.parks}">
-			<h3><a th:text = "${park.parkName}" th:href="@{|/park/${park.id}|}">Default</a></h3>
-		</li>
-
-	</ul>
-
-
-
+	<div class="grid-header">
+		<header>
+			<figure id="logo">
+				<a href="/"><img id="topPic" src="../cbusparks.png" alt="CBus Parks logo"></a>
+			</figure>
+			<!-- <h1 class="bubbleMainTitle">CBUS Parks & Rec!</h1> -->
+		</header>
+	</div>
+	
+	<section class="mainTitle">
+		<ul th:each="category : ${category}">
+			<div class="container__category--texts">
+				<li class="container__category--name">
+					<h1><a th:text="${category.categoryName}" th:href="@{|/categories/${category.id}|}"
+						style="text-decoration:none">Default</a>
+					</h1>
+				</li>
+		</ul>
+	</section>
+				
+	<section id="entirePark">
+		<ul th:each= "park : ${category.parks}">
+				<li>
+					<h3 class="parkName"><a th:text = "${park.parkName}" th:href="@{|/categories/${park.id}|}">Default</a></h3>
+					</li>
+				<li>
+					<h3><a id="location" th:text = "${park.location}" th:href="@{|/categories/${park.location}|}">Default</a></h3>
+					</li>
+			<div class="gridSection">
+				<div class="grid_1">
+					<li>
+						<!-- <a id="parkPix" th:href="@{|/parks/${park.parkImageUrl}|}"><img
+							th:src="@{${'../../' + park.parkImageUrl + '.jpg'}}"></a> -->
+						<a id="parkPix" th:href="@{|/categories/${category.id}|}"><img
+							th:src="@{${'../../' + category.imageUrl + '.jpg'}}"></a>
+					</li>
+					</div>
+				<div class="grid_2">	
+				<li id="description">
+					<h3><a id="description_text" th:text = "${park.description}" th:href="@{|/categories/${park.description}|}">Default</a></h3>
+				</li>
+			
+				</div>
+				<li>
+					<h3><a id="url" th:text = "${park.website}" th:href="@{|/categories/${park.website}|}">Default</a></h3>
+				</li>
+			
+				</div>	
+			</div>			
+		</ul>		
+	</section>
+<!------------------->	
+<div class="grid-footer">
+	<footer>
+		<p>CBus Parks and Rec,</p>
+		<!-- <script type="text/javascript">
+		document.write(new Date().getFullYear());
+	</script> -->
+	</footer>
+</div>
 </body>
+</div>
+
 </html>
