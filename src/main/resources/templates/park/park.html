@@ -10,6 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="/css/park.css">
 </head>
 <div class="background">
+
 	<body>
 		<header class="grid-header">
 			<figure id="logo">
@@ -20,14 +21,29 @@
 			</div>
 		</header>
 		<div class="container__body">
-			<form th:action="@{|/park/${park.id}|}" method="POST">
-				<h3>Add a review for this park</h3>
-				<label>Title: <input type="text" name="title" id="review-box-title"/></label><br>
-				<!-- <label>Image URL: <input type="text" name="imageUrl" /></label> -->
-				<label>Review: <input type="text" name="review" id="review-text-box"/></label><br>
-				<!-- input type="hidden" name="park" value="${park.id}" /> -->
-				<button type="submit">Submit</button>
-			</form>
+			<div class="container__grid">
+
+				<div class="review-instructions">
+					<form th:action="@{|/park/${park.id}|}" method="POST">
+						<h2>Add a review for this park</h2>
+				</div>
+
+				<section class="review-title">
+					<div class="title_text"><input type="text" placeholder="Title:"/></div>
+				</section>
+				
+
+				<section class="review__content">
+					<div class="review_input"><input type="text" placeholder="Review:"/></div>
+					
+				</section>
+
+				<div class="review__button">
+					<button type="submit">Submit</button>
+				</div>
+
+				</form>
+			</div>
 			<ul th:each="review : ${park.reviews}">
 				<li>
 					<h3><a th:text="${review.title}" th:href="@{|/reviews/${review.id}|}">Default</a></h3>
