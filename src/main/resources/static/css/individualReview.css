@@ -1,5 +1,78 @@
-li {
-    list-style: none;
+.background {
+    background-image: url("../forest-trail.jpg");
+    background-color: #5faf1b;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.border {
+    border-style: solid;
+    border-width: .5px;
+}
+
+.container__body {
+    padding-top: 1rem;
+    text-align: center;
+    max-width: 100em;
+    width: 70%;
+    background-color: white;
+    align-self: center;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+.container__list-old-comments {
+    background-color: yellow;
+    grid-column-start: 1;
+    grid-column-end: 11;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    margin: auto 4rem auto 4rem;
+    border-style: solid;
+    border-width: .5px;
+}
+
+.container__new-comment {
+    background-color: green;
+    grid-column-start: 1;
+    grid-column-end: 11;
+    margin: 2rem 4rem auto 4rem;
+}
+
+.container__old-comment-header {
+    background-color: orange;
+    grid-column-start: 1;
+    grid-column-end: 11;
+    margin: 2rem 4rem auto 4rem;
+}
+
+.container__submit {
+    background-color: pink;
+    grid-column-start: 1;
+    grid-column-end: 11;
+    margin: 2rem 4rem auto 4rem;
+}
+
+.container__title {
+    background-color: red;
+    grid-column-start: 1;
+    grid-column-end: 11;
+    margin: 2rem 4rem auto 4rem;
+    border-style: solid;
+    border-width: .5px;
+}
+
+.container__review {
+    background-color: blue;
+    grid-column-start: 1;
+    grid-column-end: 11;
+    text-align: left;
+    margin: auto 4rem auto 4rem;
 }
 
 .grid-footer {
@@ -23,33 +96,38 @@ li {
     margin-bottom: 3rem;
 }
 
-#logo {
-    margin-left: 2rem;
-}
-
 .grid-header__parkname {
     color: white;
 }
 
-.background {
-    background-image: url("../forest-trail.jpg");
-    background-color: #5faf1b;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    font-family: Arial, Helvetica, sans-serif;
+li {
+    list-style: none;
 }
 
-.container__body {
-    padding-top: 1rem;
+#logo {
+    margin-left: 2rem;
+}
+
+input::-webkit-input-placeholder {
     text-align: center;
-    max-width: 100em;
-    width: 90%;
-    background-color: white;
-    align-self: center;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
+}
+
+input:-moz-placeholder {
     text-align: center;
+}
+
+input::-moz-placeholder {
+    text-align: center;
+}
+
+input:-ms-input-placeholder {
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 80%;
+}
+
+input[type="submit"] {
+    width: 80%;
 }

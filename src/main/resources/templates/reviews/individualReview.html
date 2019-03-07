@@ -21,38 +21,51 @@
 		</header>
 
 		<div class="container__body">
-			<div>
+
+			<div class="container__title">
 				<h2>
 					<span th:text="${review.title}">Default</span>
 				</h2>
 				<!-- <span th:text = "${review.park}">Default</span> -->
 			</div>
 
-			<div>
+			<div class="container__review">
 				<h3>
 					<span th:text="${review.review}">Default</span>
 				</h3>
 			</div>
 
-			<div>
+			<!-- <div class="container__delete">
 				<form th:action="@{|/reviews/${review.id}|}" method="POST">
-					<label>Add a comment here:<input type="text" name="commentContent" /></label>
-					<button type="submit">Submit</button>
+					
+					<div class="container__delete-review">
+						<button type="submit">DELETE REVIEW</button>
+					</div>
 				</form>
-			</div>
+			</div> -->
 
-			<div>
+			<div class="container__old-comment-header">
 				<h3>Comments</h3>
 			</div>
 
-			<div>
-				<ul>
-					<li th:each="comment : ${review.comments}">
-						<h4 th:text="${comment.commentContent}">Default</a></h4>
-					</li>
-				</ul>
+			<ul class="container__list-old-comments">
+				<li th:each="comment : ${review.comments}" class="border">
+					<h4 th:text="${comment.commentContent}">Default</a></h4>
+				</li>
+			</ul>
+
+			<div class="container__new-comment">
+				<form th:action="@{|/reviews/${review.id}|}" method="POST">
+					<div class="container__add-comment">
+						<input type="text" name="commentContent" placeholder="ADD A COMMENT" />
+					</div>
+					<div class="container__submit">
+						<button type="submit">SUBMIT COMMENT</button>
+					</div>
+				</form>
 			</div>
 		</div>
+
 	</body>
 	<div class="grid-footer">
 		<footer>
