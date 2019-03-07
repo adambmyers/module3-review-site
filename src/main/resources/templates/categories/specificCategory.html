@@ -10,44 +10,62 @@
    <link rel="stylesheet" type="text/css" href="../../css/specificCategory.css">
 
 </head>
+
+<!-------------------->
 <div class="background">
 <body>
 	<div class="grid-header">
 		<header>
 			<figure id="logo">
-				<a href="/"><img src="../cbusparks.png" alt="CBus Parks logo"></a>
+				<a href="/"><img id="topPic" src="../cbusparks.png" alt="CBus Parks logo"></a>
 			</figure>
+			<!-- <h1 class="bubbleMainTitle">CBUS Parks & Rec!</h1> -->
 		</header>
 	</div>
-	<div class="container__body">
-			<section>
-				<h1>Welcome to CBUS Parks & Rec!</h1>
-				<h2>To continue with your park search, select a specific park below.</h2>
-			</section>
-		<ul class="container__category" th:each= "park : ${category.parks}">
+	
+	<section class="mainTitle">
+		<ul th:each="category : ${category}">
 			<div class="container__category--texts">
 				<li class="container__category--name">
-					<h3><a th:text = "${park.parkName}" th:href="@{|/categories/${park.id}|}">Default</a></h3>
-				</li>
-				
-				<li class="container__category--description">
-						<h3><a th:text = "${park.location}" th:href="@{|/categories/${park.location}|}">Default</a></h3>
-					</li>
-
-				<li class="container__category--description">
-					<h3><a th:text = "${park.website}" th:href="@{|/categories/${park.website}|}">Default</a></h3>
-				</li>
-
-				<li class="container__category--description">
-						<h3><a th:text = "${park.description}" th:href="@{|/categories/${park.description}|}">Default</a></h3>
-				</li>
-			</div> 
-				<li class="container__category--image">
-					<a th:href="@{|/parks/${park.parkImageUrl}|}"><img
-							th:src="@{${'../../' + park.parkImageUrl + '.jpg'}}"></a>
+					<h1><a th:text="${category.categoryName}" th:href="@{|/categories/${category.id}|}"
+						style="text-decoration:none">Default</a>
+					</h1>
 				</li>
 		</ul>
-	</div>
+	</section>
+				
+	<section id="entirePark">
+		<ul th:each= "park : ${category.parks}">
+				<li>
+					<h3 class="parkName"><a th:text = "${park.parkName}" th:href="@{|/categories/${park.id}|}">Default</a></h3>
+					</li>
+				<li>
+					<h3><a id="location" th:text = "${park.location}" th:href="@{|/categories/${park.location}|}">Default</a></h3>
+					</li>
+			<div class="gridSection">
+				<div class="grid_1">
+					<li>
+						<!-- <a id="parkPix" th:href="@{|/parks/${park.parkImageUrl}|}"><img
+							th:src="@{${'../../' + park.parkImageUrl + '.jpg'}}"></a> -->
+						<a id="parkPix" th:href="@{|/categories/${category.id}|}"><img
+							th:src="@{${'../../' + category.imageUrl + '.jpg'}}"></a>
+					</li>
+					</div>
+				<div class="grid_2">	
+				<li id="description">
+					<h3><a id="description_text" th:text = "${park.description}" th:href="@{|/categories/${park.description}|}">Default</a></h3>
+				</li>
+			
+				</div>
+				<li>
+					<h3><a id="url" th:text = "${park.website}" th:href="@{|/categories/${park.website}|}">Default</a></h3>
+				</li>
+			
+				</div>	
+			</div>			
+		</ul>		
+	</section>
+<!------------------->	
 <div class="grid-footer">
 	<footer>
 		<p>CBus Parks and Rec,</p>
