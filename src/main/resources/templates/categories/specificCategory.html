@@ -37,7 +37,7 @@
 	<section id="entirePark">
 		<ul th:each= "park : ${category.parks}">
 				<li>
-					<h3 class="parkName"><a th:text = "${park.parkName}" th:href="@{|/categories/${park.id}|}">Default</a></h3>
+					<h3 class="parkName"><a th:text = "${park.parkName}" th:href="@{|/park/${park.id}|}">Default</a></h3>
 					</li>
 				<li>
 					<h3><a id="location" th:text = "${park.location}" th:href="@{|/categories/${park.location}|}">Default</a></h3>
@@ -45,10 +45,9 @@
 			<div class="gridSection">
 				<div class="grid_1">
 					<li>
-						<!-- <a id="parkPix" th:href="@{|/parks/${park.parkImageUrl}|}"><img
-							th:src="@{${'../../' + park.parkImageUrl + '.jpg'}}"></a> -->
-						<a id="parkPix" th:href="@{|/categories/${category.id}|}"><img
-							th:src="@{${'../../' + category.imageUrl + '.jpg'}}"></a>
+						<a id="parkPix" th:href="@{|/park/${park.id}|}"><img
+							th:src="@{${'../../' + park.parkImageUrl + '.jpg'}}"></a>
+						
 					</li>
 					</div>
 				<div class="grid_2">	
