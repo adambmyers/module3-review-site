@@ -17,7 +17,6 @@ li {
 
 .grid-header__parkname {
     color: white;
-    
 }
 
 #logo {
@@ -49,94 +48,69 @@ li {
 .container__body {
     padding-top: 1rem;
     text-align: center;
-    width: 90%;
+    width: 60%;
     background: hsla(120, 33%, 99%, 0.5);
-    /* opacity: 0.4; */
     align-self: center;
     border-radius: 15px;
-}
-
-.container__grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(7, 1fr);
-    grid-gap: 5px;
+    grid-template-columns: repeat(10, 1fr);
 }
 
 .review-instructions {
-    grid-row-start: 1;
-    grid-row-end: 2;
-    grid-column-start: 2;
-    grid-column-end: 5;
-    background-color: red;
+    grid-column-start: 1;
+    grid-column-end: 11;
+    /* background-color: blue; */
     text-align: center;
-
+    border-style: solid;
+    border-width: .5px;
 }
 
 .review-title {
-    grid-row: 3 / span 1;
-    grid-column: 2 / span 3;
-    background-color: red;
+    grid-column-start: 1;
+    grid-column-end: 11;
+    background-color: purple;
+    border-style: solid;
+    border-width: .5px;
 }
 
 .review__content {
-    grid-row: 4 / span 3;
-    grid-column: 2 / span 3;
-    background-color: red;
+    grid-column-start: 1;
+    grid-column-end: 11;
+    background-color: green;
+    border-style: solid;
+    border-width: .5px;
 }
 
 .review__button {
-    grid-row: 8 / span 1;
-    grid-column: 3;
-    background-color: red;
-}
-h1 {
-    font-size: 4rem;
-    color: white;
-    padding-right: 10px;
-}
-h2 {
-    font-size: 3rem;
-    color: black;
-}
-h3 {
-    font-size: 2rem;
-    color: black;
-}
-h4 {
-    font-size: 1rem;
-    color: black;
-}
-label {
-    font-size: 1rem;
-    color: black;
+    grid-column-start: 1;
+    grid-column-end: 11;
+    background-color: orange;
+    border-style: solid;
+    border-width: .5px;
 }
 
-button {
-    font-size: 3rem;
-    border-radius: 2px;
-    box-shadow: black;
-    
-
-}
-input[type=text]
-.title_text {
-    width: 100%;
-    border: 2px solid #aaa;
-    border-radius: 2px;
-    margin:8px 0;
-    padding:8px;
-    box-sizing: border-box;
-    transition: .3s;
+.old-reviews {
+    grid-column-start: 1;
+    grid-column-end: 11;
+    background-color: yellow;
+    border-style: solid;
+    border-width: .5px;
+    text-align: center;
+    margin: auto;
 }
 
 .review_input {
     width: 100%;
     height: 40px;
-    border: 2px solid #aaa;
-    border-radius: 2px;
-    margin:8px 0;
-    padding:8px;
-    box-sizing: border-box;
-    transition: .3s;
+    /* border: 2px solid #aaa;
+    border-radius: 2px; */
+    /* margin: 8px 0;
+    padding: 8px; */
+    /* box-sizing: border-box;
+    transition: .3s; */
+}
+
+input[type="text"] {
+    width: 80%;
+    height: 1rem;
 }

@@ -64,7 +64,7 @@
 	}
   	    
   .grid-header {
-	box-shadow: 0 1px 9px -2px #FFFFFF;
+    box-shadow: 0 1px 9px -2px #FFFFFF;
     background-color: black;
     opacity: .8;
     text-align: center;
@@ -74,7 +74,7 @@
     justify-content: space-between;
     padding: 1.2rem;
     margin-bottom: 3rem;
-    }
+}
   
    html { 
 	background-image: url("../forest-trail.jpg");
@@ -129,4 +129,8 @@
     .wrapper {
 	display: grid;
 	grid-template-rows: .5fr 3fr .5fr;
-    }
+		}
+		
+		#logo {
+			margin-left: 2rem;
+	}
