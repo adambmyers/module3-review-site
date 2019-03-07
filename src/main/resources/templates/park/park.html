@@ -3,32 +3,67 @@
 
 
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <title>Single Park's Reviews</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Single Park's Reviews</title>
+	<link rel="stylesheet" type="text/css" href="/css/park.css">
 </head>
+<div class="background">
 
-<body>
-	<form th:action="@{|/park/${park.id}|}" method="POST">
-		<h3>Add a review for this park</h3>
-		<label>Title: <input type="text" name="title"/></label>
-		<label>Image URL: <input type="text" name="imageUrl"/></label>
-		<label>Review: <input type="text" name="review"/></label>
-		<<!-- input type="hidden" name="park" value="${park.id}"/> -->
-		<button type="submit">Submit</button>
-	</form>
+	<body>
+		<header class="grid-header">
+			<figure id="logo">
+				<a href="/"><img src="../cbusparks.png" alt="CBus Parks logo"></a>
+			</figure>
+			<div class="grid-header__parkname">
+				<h1 th:text="${park.parkName}">Park Name Here...</h1>
+			</div>
+		</header>
+		<div class="container__body">
+			<div class="container__grid">
 
-	<ul>
-		<li th:each ="review : ${park.reviews}">
-			<h3><a th:text = "${review.title}" th:href="@{|/reviews/${review.id}|}">Default</a></h3>
-			<h4>
-				<span th:text = "${review.review}">Default</span>
-			</h4>
-		</li>
-	</ul>
+				<div class="review-instructions">
+					<form th:action="@{|/park/${park.id}|}" method="POST">
+						<h2>Add a review for this park</h2>
+				</div>
 
+				<section class="review-title">
+					<div class="title_text"><input type="text" placeholder="Title:"/></div>
+				</section>
+				
 
+				<section class="review__content">
+					<div class="review_input"><input type="text" placeholder="Review:"/></div>
+					
+				</section>
 
-</body>
+				<div class="review__button">
+					<button type="submit">Submit</button>
+				</div>
+
+				</form>
+			</div>
+			<ul th:each="review : ${park.reviews}">
+				<li>
+					<h3><a th:text="${review.title}" th:href="@{|/reviews/${review.id}|}">Default</a></h3>
+				</li>
+				<li>
+					<h4>
+						<span th:text="${review.review}">Default</span>
+					</h4>
+				</li>
+			</ul>
+		</div>
+	</body>
+	<div class="grid-footer">
+		<footer>
+			<p>CBus Parks and Rec,</p>
+			<!-- <script type="text/javascript">
+				document.write(new Date().getFullYear());
+			</script> -->
+		</footer>
+	</div>
+</div>
+
 </html>
