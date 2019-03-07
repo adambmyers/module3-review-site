@@ -18,6 +18,7 @@ public class Category {
 	private String categoryName;
 	@Lob
 	private String categoryDescription;
+	private String imageUrl;
 	
 	
 	@ManyToMany (mappedBy="categories")
@@ -27,9 +28,10 @@ public class Category {
 		//JPA hook; do not change
 	}
 	
-	public Category(String categoryName, String categoryDescription) {
+	public Category(String categoryName, String categoryDescription, String imageUrl) {
 		this.categoryName = categoryName;
 		this.categoryDescription = categoryDescription;
+		this.imageUrl = imageUrl;
 //		this.parks = new ArrayList<>();
 	}
 	
@@ -44,6 +46,10 @@ public class Category {
 	
 	public String getCategoryDescription() {
 		return categoryDescription;
+	}
+	
+	public String getImageUrl() {
+		return imageUrl;
 	}
 	
 	

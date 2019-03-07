@@ -7,21 +7,51 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Categories</title>
+	<link rel="stylesheet" type="text/css" href="/css/categoryList.css">
 </head>
-<body>
-	<section>
-		<h1>
-			Welcome to CBUS Parks & Rec! To get started with your park search, select a park category below. 
-		</h1>
-	</section>
-	<section>
-		<ul>
-			<li th:each="category : ${category}">
-				<h3 th:text="${category.categoryDescription}"></h3>
-				<h3><a th:text="${category.categoryName}" th:href="@{|/categories/${category.id}|}">Default</a></h3>
-			</li>
-		</ul>
-	</section>
-</body>
+<div class="background">
+
+	<body>
+		<div class="grid-header">
+			<header>
+				<figure id="logo">
+					<a href="/"><img src="../cbusparks.png" alt="CBus Parks logo"></a>
+				</figure>
+			</header>
+		</div>
+		<div class="container__body">
+			<section>
+				<h1>Welcome to CBUS Parks & Rec!</h1>
+				<h2>To get started with your park search, select a park category below.</h2>
+			</section>
+			<section>
+				<ul class="container__category" th:each="category : ${category}">
+					<div class="container__category--texts">
+						<li class="container__category--name">
+							<h3><a th:text="${category.categoryName}" th:href="@{|/categories/${category.id}|}"
+									style="text-decoration:none">Default</a>
+							</h3>
+						</li>
+						<li class="container__category--description">
+							<h3 th:text="${category.categoryDescription}"></h3>
+						</li>
+					</div>
+					<li class="container__category--image">
+						<a th:href="@{|/categories/${category.id}|}"><img
+								th:src="@{${'../../' + category.imageUrl + '.jpg'}}"></a>
+					</li>
+				</ul>
+			</section>
+		</div>
+	</body>
+	<div class="grid-footer">
+		<footer>
+			<p>CBus Parks and Rec,</p>
+			<!-- <script type="text/javascript">
+			document.write(new Date().getFullYear());
+		</script> -->
+		</footer>
+	</div>
+</div>
 
 </html>

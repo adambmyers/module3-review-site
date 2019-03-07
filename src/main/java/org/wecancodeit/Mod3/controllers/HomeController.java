@@ -29,4 +29,26 @@ public class HomeController {
 //	}
 	
 	
+	
+//below goes in controller	
+
+//	@PostMapping("/deleteReview") //trying to create method to delete review. method built in Beer.java
+//	public String deleteReview(Long id) {
+////		Optional<Review> review = reviews.findById(id);
+//		reviews.deleteById(id);
+//		return "redirect:/";		
+//	}
+	
+
+//goes into TH
+	
+//	 <article th:each="review : ${reviews}">
+//     <form th:action="@{/deleteReview}" method="POST">
+//       <input type="hidden" name="id" th:value="${review.id}">
+//       <button type="submit">Remove</button>
+//     </form>
+	
+	
+// also see reviewRepo
+	
 }
