@@ -26,15 +26,15 @@
 				<div class="review-instructions">
 					<form th:action="@{|/park/${park.id}|}" method="POST">
 						<h2>Add a review for this park</h2>
-				</div>
+				
 
 				<section class="review-title">
-					<div class="title_text"><input type="text" placeholder="Title:"/></div>
+					<div class="title_text"><input type="text" name="title" placeholder="Title:"/></div>
 				</section>
 				
 
 				<section class="review__content">
-					<div class="review_input"><input type="text" placeholder="Review:"/></div>
+					<div class="review_input"><input type="text" name="review" placeholder="Review:"/></div>
 					
 				</section>
 
@@ -42,7 +42,7 @@
 					<button type="submit">Submit</button>
 				</div>
 
-				</form>
+			</form>
 			</div>
 			<ul th:each="review : ${park.reviews}">
 				<li>
