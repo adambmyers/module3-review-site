@@ -1,3 +1,8 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
 li {
     list-style: none;
 }
@@ -31,6 +36,7 @@ li {
     display: flex;
     flex-direction: column;
     font-family: Arial, Helvetica, sans-serif;
+    min-height: 100%;
 }
 
 .grid-footer {
@@ -38,7 +44,12 @@ li {
     color: #ffffff;
     opacity: .8;
     padding: 1.2rem;
-    margin-top: 3rem;
+}
+
+.align-content {
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 .container__body {
@@ -48,65 +59,36 @@ li {
     background: hsla(120, 33%, 99%, 0.5);
     align-self: center;
     border-radius: 15px;
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
+    max-width: 1000px;
+    margin-bottom: 2rem;
 }
 
 .review-instructions {
-    grid-column-start: 1;
-    grid-column-end: 11;
-    /* background-color: blue; */
     text-align: center;
-    border-style: solid;
-    border-width: .5px;
 }
 
-.review-title {
-    grid-column-start: 1;
-    grid-column-end: 11;
-    background-color: purple;
-    border-style: solid;
-    border-width: .5px;
-}
-
-.review__content {
-    grid-column-start: 1;
-    grid-column-end: 11;
-    background-color: green;
-    border-style: solid;
-    border-width: .5px;
+.left-align {
+    text-align: left;
 }
 
 .review__button {
-    grid-column-start: 1;
-    grid-column-end: 11;
-    background-color: orange;
-    border-style: solid;
-    border-width: .5px;
+    margin-bottom: 2rem;
 }
 
 .old-reviews {
-    grid-column-start: 1;
-    grid-column-end: 11;
-    background-color: yellow;
+    width: 100%;
+    background-color: white;
+    border-width: 0.2px;
+    border-color: black;
     border-style: solid;
-    border-width: .5px;
-    text-align: center;
-    margin: auto;
 }
 
 .review_input {
     width: 100%;
     height: 40px;
-    /* border: 2px solid #aaa;
-    border-radius: 2px; */
-    /* margin: 8px 0;
-    padding: 8px; */
-    /* box-sizing: border-box;
-    transition: .3s; */
 }
 
 input[type="text"] {
     width: 80%;
-    height: 1rem;
+    height: 2rem;
 }
