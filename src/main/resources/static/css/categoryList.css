@@ -88,6 +88,8 @@ li {
 .grid-main {}
 
 .grid-footer {
+    display: flex;
+    justify-content: center;
     background-color: #000000;
     color: #ffffff;
     opacity: .8;

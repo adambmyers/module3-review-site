@@ -137,15 +137,16 @@ a {
     margin-bottom: 3rem;
 }
 
-footer {
+.container-footer {
+    display: flex;
+    justify-content: center;
     background-color: black;
 	bottom: 0;
 	color: white;
-	display: flex;
 	left: 0;
 	opacity: .8;
-	position: fixed;
-	text-align: center;
+    padding: 1.2rem;
+    margin-top: 3rem;
 	width: 100%;
 }
 
