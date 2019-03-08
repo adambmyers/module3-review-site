@@ -3,6 +3,7 @@
 	padding:0;
 	}
   #cat1 {
+	border-radius: 25px;
 	display: flex;
 	justify-content: center;
 	align-items: center; 
@@ -15,6 +16,7 @@
 
 	}
   #cat2{
+	border-radius: 25px;
 	display: flex;
 	justify-content: center;
 	align-items: center; 
