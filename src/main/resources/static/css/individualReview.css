@@ -1,11 +1,18 @@
 .background {
-    background-image: url("../forest-trail.jpg");
-    background-color: #5faf1b;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    font-family: Arial, Helvetica, sans-serif;
+ /* The image used */
+ background-image: url("../forest-trail.jpg");
+ z-index: 0;
+ /* Set a specific height */
+ height: 100%; 
+ 
+ /* Create the parallax scrolling effect */
+ background-attachment: fixed;
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ margin: auto;
+ border-radius: 0px;
+ font-family: Arial, Helvetica, sans-serif;
 }
 
 .border {
@@ -13,20 +20,23 @@
     border-width: .5px;
 }
 
-.container__body {
+ .container__body {
     padding-top: 1rem;
     text-align: center;
     max-width: 100em;
     width: 70%;
-    background-color: white;
     align-self: center;
     border-radius: 15px;
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-}
+    justify-content: center;
+    margin: auto;
+    background: rgba(204, 204, 204, 0.5);
+
+} 
 
 .container__list-old-comments {
-    /* background-color: yellow; */
+    background-color: white;  
     grid-column-start: 1;
     grid-column-end: 11;
     margin: 0;
@@ -39,28 +49,31 @@
 }
 
 .container__new-comment {
-    /* background-color: green; */
+    background-color: white;
     grid-column-start: 1;
     grid-column-end: 11;
     margin: 2rem 4rem auto 4rem;
 }
 
 .container__old-comment-header {
-    /* background-color: orange; */
+    background-color: white;  
     grid-column-start: 1;
     grid-column-end: 11;
     margin: 1rem 4rem auto 4rem;
 }
 
 .container__submit {
-    /* background-color: pink; */
+    background-color: #000; 
     grid-column-start: 1;
     grid-column-end: 11;
-    margin: 2rem 4rem 1rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
 }
 
 .container__title {
-    /* background-color: red; */
+    background-color:#fff; 
     grid-column-start: 1;
     grid-column-end: 11;
     margin: 1rem 4rem -.5px 4rem;
@@ -69,13 +82,14 @@
 }
 
 .container__review {
-    /* background-color: blue; */
+    background-color: #fff; 
     grid-column-start: 1;
     grid-column-end: 11;
     text-align: left;
     margin: auto 4rem auto 4rem;
     border-style: solid;
     border-width: .5px;
+    padding: 10px;
 }
 
 #commentWrap{
@@ -83,12 +97,16 @@
     flex-wrap: wrap;
 }
 
-.grid-footer {
-    background-color: #000000;
-    color: #ffffff;
-    opacity: .8;
-    padding: 1.2rem;
-    margin-top: 3rem;
+footer {
+    background-color: black;
+	bottom: 0;
+	color: white;
+	display: flex;
+	left: 0;
+	opacity: .8;
+	position: fixed;
+	text-align: center;
+	width: 100%;
 }
 
 .grid-header {
@@ -106,6 +124,7 @@
 
 .grid-header__parkname {
     color: white;
+    padding-right: 1rem;
 }
 
 li {
@@ -113,7 +132,7 @@ li {
 }
 
 #logo {
-    margin-left: 2rem;
+    margin-left: 1rem;
 }
 
 input::-webkit-input-placeholder {
@@ -138,6 +157,16 @@ input[type="text"] {
     height: 3rem;
 }
 
-input[type="submit"] {
-    width: 100%;
+.grid-footer {
+    background-color: #000000;
+    color: #ffffff;
+    opacity: .8;
+    padding: 1.2rem;
 }
+
+.align-content {
+    align-items: center;
+    display: flex;
+  justify-content: center;
+}
+

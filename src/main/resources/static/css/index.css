@@ -3,7 +3,9 @@
 	padding:0;
 	}
   #cat1 {
+	border-radius: 25px;
 	display: flex;
+	border-radius: 20px;
 	justify-content: center;
 	align-items: center; 
 	color: white;
@@ -12,10 +14,12 @@
 	padding: 2em;
 	list-style-type: none;
 	text-decoration: none;
-
+	font-family: Arial, Helvetica, sans-serif;
 	}
+	
   #cat2{
 	display: flex;
+	border-radius: 20px;
 	justify-content: center;
 	align-items: center; 
 	color: white;
@@ -24,7 +28,8 @@
 	opacity: .8;
 	padding: 2em;
 	text-decoration: none;
-  }		
+	font-family: Arial, Helvetica, sans-serif;
+    }		
     
   #center {
 	display: flex;
@@ -33,6 +38,7 @@
 	color: white;
 	background-color: black; 
 	opacity: .8;
+	font-family: Arial, Helvetica, sans-serif;
 	}
   #center2 {
 	display: flex;
@@ -41,6 +47,7 @@
 	background-color:  black;
 	color: white;
 	opacity: .8;
+	font-family: Arial, Helvetica, sans-serif;
     }
   
   footer {
@@ -62,7 +69,7 @@
 	}
   	    
   .grid-header {
-	box-shadow: 0 1px 9px -2px #FFFFFF;
+    box-shadow: 0 1px 9px -2px #FFFFFF;
     background-color: black;
     opacity: .8;
     text-align: center;
@@ -72,7 +79,7 @@
     justify-content: space-between;
     padding: 1.2rem;
     margin-bottom: 3rem;
-    }
+}
   
    html { 
 	background-image: url("../forest-trail.jpg");
@@ -81,7 +88,8 @@
 	background-repeat: no-repeat;
 	font-size: 2em;
 	min-width: 100%;
-	min-height: 100%;	 
+	min-height: 100%;
+	font-family: Arial, Helvetica, sans-serif;	 
     } 
 
 	li  {
@@ -127,4 +135,8 @@
     .wrapper {
 	display: grid;
 	grid-template-rows: .5fr 3fr .5fr;
-    }
+		}
+		
+		#logo {
+			margin-left: 2rem;
+	}

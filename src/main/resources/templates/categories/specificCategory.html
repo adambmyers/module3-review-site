@@ -13,35 +13,34 @@
 
 <!-------------------->
 <div class="background">
-<body>
+ <body>
 	<div class="grid-header">
 		<header>
 			<figure id="logo">
-				<a href="/"><img id="topPic" src="../cbusparks.png" alt="CBus Parks logo"></a>
+				<a href="/"><img src="../cbusparks.png" alt="CBus Parks logo"></a>
 			</figure>
-			<!-- <h1 class="bubbleMainTitle">CBUS Parks & Rec!</h1> -->
+			
 		</header>
-	</div>
-	
-	<section class="mainTitle">
+	<!-- <section class="mainTitle"> -->
 		<ul th:each="category : ${category}">
-			<div class="container__category--texts">
-				<li class="container__category--name">
+			<div class="container_category-texts">
+				<li class="container_category-name">
 					<h1><a th:text="${category.categoryName}" th:href="@{|/categories/${category.id}|}"
 						style="text-decoration:none">Default</a>
 					</h1>
 				</li>
+			</div>
 		</ul>
 	</section>
-				
+    </div>			
 	<section id="entirePark">
 		<ul th:each= "park : ${category.parks}">
 				<li>
 					<h3 class="parkName"><a th:text = "${park.parkName}" th:href="@{|/park/${park.id}|}">Default</a></h3>
-					</li>
+				</li>
 				<li>
 					<h3><a id="location" th:text = "${park.location}" th:href="@{|/categories/${park.location}|}">Default</a></h3>
-					</li>
+				</li>
 			<div class="gridSection">
 				<div class="grid_1">
 					<li>
@@ -49,31 +48,29 @@
 							th:src="@{${'../../' + park.parkImageUrl + '.jpg'}}"></a>
 						
 					</li>
-					</div>
+				</div>
 				<div class="grid_2">	
 				<li id="description">
 					<h3><a id="description_text" th:text = "${park.description}" th:href="@{|/categories/${park.description}|}">Default</a></h3>
 				</li>
-			
 				</div>
+				<div>			
 				<li>
 					<h3><a id="url" th:text = "${park.website}" th:href="${park.website}">Default</a></h3>
 				</li>
-			
-				</div>	
+				</div>
 			</div>			
 		</ul>		
 	</section>
-<!------------------->	
-<div class="grid-footer">
+ </body>
+ <div class="container-footer">
 	<footer>
-		<p>CBus Parks and Rec,</p>
+		<p>CBus Parks and Rec, 2019</p>
 		<!-- <script type="text/javascript">
 		document.write(new Date().getFullYear());
 	</script> -->
 	</footer>
-</div>
-</body>
+ </div>
 </div>
 
 </html>
