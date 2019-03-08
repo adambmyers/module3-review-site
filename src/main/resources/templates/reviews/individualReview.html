@@ -2,37 +2,75 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Review</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Review</title>
+	<link rel="stylesheet" type="text/css" href="/css/individualReview.css">
 </head>
+<div class="background">
 
-<body>
-	<main>
-		<h1 th:text = "${review.park.parkName}">Park Name Here...</h1>
-			<!-- <h3 th:text = "${park.parkName}">Default</h3>
- -->
-        <h2>
-        	<span th:text = "${review.title}">Default</span>
-        </h2>
-        	<!-- <span th:text = "${review.park}">Default</span> -->
-        <h3>
-            <span th:text = "${review.review}">Default</span>
-        </h3>
+	<body>
+		<header class="grid-header">
+			<figure id="logo">
+				<a href="/"><img id="topPic" src="../cbusparks.png" alt="CBus Parks logo"></a>
+			</figure>
+			<div class="grid-header__parkname">
+				<h1 th:text="${review.park.parkName}">Park Name Here...</h1>
+			</div>
+		</header>
+		<div class="container__body">
 
-        <form th:action="@{|/reviews/${review.id}|}" method="POST">
-			<label>Add a comment here:<input type="text" name="commentContent"/></label>
-			<button type="submit">Submit</button>
-		</form>
+			<div class="container__title">
+				<h2>
+					<span th:text="${review.title}">Default</span>
+				</h2>
+				<!-- <span th:text = "${review.park}">Default</span> -->
+			</div>
 
-        <h3>Comments</h3>
-        	<ul>
-        		<li th:each ="comment : ${review.comments}">
-        			<h4 th:text = "${comment.commentContent}">Default</a></h4>
-        		</li>
-        	</ul>
+			<div class="container__review">
+				<h3>
+					<span th:text="${review.review}">Default</span>
+				</h3>
+			</div>
 
-    </main>
-</body>
+			<!-- <div class="container__delete">
+				<form th:action="@{|/reviews/${review.id}|}" method="POST">
+					
+					<div class="container__delete-review">
+						<button type="submit">DELETE REVIEW</button>
+					</div>
+				</form>
+			</div> -->
+
+			<div class="container__old-comment-header">
+				<h3>Comments</h3>
+			</div>
+
+			<ul class="container__list-old-comments">
+				<li th:each="comment : ${review.comments}" class="border">
+					<h4 id="commentWrap" th:text="${comment.commentContent}">Default</a></h4>
+				</li>
+			</ul>
+
+			<div class="container__new-comment">
+				<form th:action="@{|/reviews/${review.id}|}" method="POST">
+					<div class="container__add-comment">
+						<input type="text" name="commentContent" placeholder="ADD A COMMENT" />
+					</div>
+					<div class="container__submit">
+						<button id="button" type="submit">SUBMIT COMMENT</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+	<div class="grid-footer">
+		<footer class="align-content">
+			<p>CBus Parks and Rec, 2019</p>
+			</script>
+		</footer>
+	</div>
+</div>
+
 </html>

@@ -9,7 +9,7 @@
 
 a {
     text-decoration: none;
-    color: black;
+    color: green;
 }
 
 li {
@@ -30,11 +30,11 @@ li {
     padding-top: 1rem;
     text-align: center;
     max-width: 100em;
-    width: 90%;
-    background-color: white;
+    width: 80%;
+    /*background-color: white;*/
     align-self: center;
-    border-radius: 15px;
-    
+    border-radius: 8px;
+    background: rgba(204, 204, 204, 0.5);
 }
 
 .container__category {
@@ -43,6 +43,7 @@ li {
     border-style: solid;
     list-style-type: none;
     align-items: center;
+    background-color: #fff;
 }
 
 .container__category--image {
@@ -53,9 +54,8 @@ li {
     margin-bottom: 3rem;
 }
 
-.container__category:last-of-type {
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+.container__category--texts {
+    text-decoration: none;
 }
 
 .container__welcome {
@@ -78,9 +78,16 @@ li {
     margin-bottom: 3rem;
 }
 
+.container__category:last-of-type {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
 .grid-main {}
 
 .grid-footer {
+    display: flex;
+    justify-content: center;
     background-color: #000000;
     color: #ffffff;
     opacity: .8;

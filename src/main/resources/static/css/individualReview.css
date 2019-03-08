@@ -1,0 +1,172 @@
+.background {
+ /* The image used */
+ background-image: url("../forest-trail.jpg");
+ z-index: 0;
+ /* Set a specific height */
+ height: 100%; 
+ 
+ /* Create the parallax scrolling effect */
+ background-attachment: fixed;
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ margin: auto;
+ border-radius: 0px;
+ font-family: Arial, Helvetica, sans-serif;
+}
+
+.border {
+    border-style: solid;
+    border-width: .5px;
+}
+
+ .container__body {
+    padding-top: 1rem;
+    text-align: center;
+    max-width: 100em;
+    width: 70%;
+    align-self: center;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    justify-content: center;
+    margin: auto;
+    background: rgba(204, 204, 204, 0.5);
+
+} 
+
+.container__list-old-comments {
+    background-color: white;  
+    grid-column-start: 1;
+    grid-column-end: 11;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    margin: -.5px 4rem -.5px 4rem;
+    border-style: solid;
+    border-width: .5px;
+    white-space:normal;
+}
+
+.container__new-comment {
+    background-color: white;
+    grid-column-start: 1;
+    grid-column-end: 11;
+    margin: 2rem 4rem auto 4rem;
+}
+
+.container__old-comment-header {
+    background-color: white;  
+    grid-column-start: 1;
+    grid-column-end: 11;
+    margin: 1rem 4rem auto 4rem;
+}
+
+.container__submit {
+    background-color: #000; 
+    grid-column-start: 1;
+    grid-column-end: 11;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container__title {
+    background-color:#fff; 
+    grid-column-start: 1;
+    grid-column-end: 11;
+    margin: 1rem 4rem -.5px 4rem;
+    border-style: solid;
+    border-width: .5px;
+}
+
+.container__review {
+    background-color: #fff; 
+    grid-column-start: 1;
+    grid-column-end: 11;
+    text-align: left;
+    margin: auto 4rem auto 4rem;
+    border-style: solid;
+    border-width: .5px;
+    padding: 10px;
+}
+
+#commentWrap{
+    flex: display;
+    flex-wrap: wrap;
+}
+
+footer {
+    background-color: black;
+	bottom: 0;
+	color: white;
+	display: flex;
+	left: 0;
+	opacity: .8;
+	position: fixed;
+	text-align: center;
+	width: 100%;
+}
+
+.grid-header {
+    box-shadow: 0 1px 9px -2px #FFFFFF;
+    background-color: black;
+    opacity: .8;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.2rem;
+    margin-bottom: 3rem;
+}
+
+.grid-header__parkname {
+    color: white;
+    padding-right: 1rem;
+}
+
+li {
+    list-style: none;
+}
+
+#logo {
+    margin-left: 1rem;
+}
+
+input::-webkit-input-placeholder {
+    text-align: center;
+}
+
+input:-moz-placeholder {
+    text-align: center;
+}
+
+input::-moz-placeholder {
+    text-align: center;
+}
+
+input:-ms-input-placeholder {
+    text-align: center;
+
+}
+
+input[type="text"] {
+    width: 100%;
+    height: 3rem;
+}
+
+.grid-footer {
+    background-color: #000000;
+    color: #ffffff;
+    opacity: .8;
+    padding: 1.2rem;
+}
+
+.align-content {
+    align-items: center;
+    display: flex;
+  justify-content: center;
+}
+

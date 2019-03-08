@@ -18,5 +18,7 @@ public interface ReviewRepository extends CrudRepository<Review,Long> {
 	
 	Object findAllById(Long reviewId);
 	
+	void deleteById(Long id);
+	
 	}
 
